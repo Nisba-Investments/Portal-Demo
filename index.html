@@ -8,7 +8,7 @@
     
   <script type="text/javascript">(function(w,s){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://cdn-eu.pagesense.io/js/canvigroup131/eca4cfb85b8d4b93a30df9b8231b822c.js";var x=document.getElementsByTagName("script")[0];x.parentNode.insertBefore(e,x);})(window,"script");</script>
 
-    <style>
+     <style>
         * {
             margin: 0;
             padding: 0;
@@ -1895,7 +1895,7 @@
         }
 
         /* Responsive adjustments for new components */
-        @media (max-width: 768px) {
+        @media (max-width: 968px) {
             .client-item, .session-item, .department-item, .module-item {
                 flex-direction: column;
                 align-items: flex-start;
@@ -1918,6 +1918,406 @@
             .impact-item {
                 flex-direction: column;
                 text-align: center;
+            }
+
+            .breadcrumb-list {
+                gap: 0.5rem;
+            }
+
+            .breadcrumb-item::after {
+                width: 20px;
+                left: 35px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Improved mobile typography */
+            .hero-content h1 {
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+
+            .step-title {
+                font-size: 1.5rem;
+            }
+
+            .welcome-message {
+                font-size: 1.5rem;
+            }
+
+            /* Better mobile spacing */
+            .container {
+                padding: 0 1rem;
+            }
+
+            .onboarding-container, .dashboard-container {
+                padding: 1rem;
+            }
+
+            /* Improved form layouts */
+            .form-card {
+                padding: 1.5rem;
+                margin: 1rem 0;
+            }
+
+            .option-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .option-card {
+                padding: 1.5rem;
+                text-align: center;
+            }
+
+            /* Better button layouts */
+            .navigation-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .navigation-buttons .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            /* Dashboard improvements */
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .dashboard-card {
+                padding: 1.5rem;
+            }
+
+            /* Mobile-specific breadcrumb */
+            .breadcrumb-list {
+                justify-content: space-between;
+                overflow-x: auto;
+                padding: 0 1rem;
+            }
+
+            .breadcrumb-item {
+                min-width: 80px;
+                flex-shrink: 0;
+            }
+
+            .breadcrumb-label {
+                font-size: 0.7rem;
+            }
+
+            .breadcrumb-number {
+                width: 25px;
+                height: 25px;
+                font-size: 0.8rem;
+            }
+
+            /* Search container mobile */
+            .card-header-with-search {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 1rem;
+            }
+
+            .search-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .search-box input {
+                min-width: 100%;
+            }
+        }
+
+        /* Advanced Features Mobile Responsiveness */
+        @media (max-width: 768px) {
+            /* Investment Simulator Mobile */
+            .simulator-header {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+            }
+
+            .simulator-balance {
+                justify-content: center;
+            }
+
+            .balance-amount {
+                font-size: 1.2rem;
+            }
+
+            .simulator-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .simulator-card {
+                padding: 1.5rem;
+            }
+
+            .stock-item {
+                padding: 1rem;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0.5rem;
+            }
+
+            .stock-price {
+                text-align: left;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            /* Screener Mobile */
+            .screener-filters {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .filter-card {
+                padding: 1.5rem;
+            }
+
+            .stocks-table {
+                overflow-x: auto;
+            }
+
+            .table-header, .table-row {
+                display: block;
+                padding: 1rem;
+            }
+
+            .table-header > div, .table-row > div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0.5rem 0;
+                border-bottom: 1px solid #F3F4F6;
+            }
+
+            .table-header > div:last-child, .table-row > div:last-child {
+                border-bottom: none;
+            }
+
+            .table-header > div::before, .table-row > div::before {
+                content: attr(data-label);
+                font-weight: bold;
+                color: var(--primary-blue);
+                min-width: 120px;
+            }
+
+            .col-symbol::before { content: 'Symbol: '; }
+            .col-name::before { content: 'Company: '; }
+            .col-price::before { content: 'Price: '; }
+            .col-change::before { content: 'Change: '; }
+            .col-halal::before { content: 'Status: '; }
+            .col-action::before { content: 'Action: '; }
+
+            /* Video Session Mobile */
+            .session-header {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+            }
+
+            .session-info {
+                justify-content: center;
+            }
+
+            .video-session {
+                grid-template-columns: 1fr;
+                height: auto;
+                gap: 1rem;
+            }
+
+            .video-area {
+                height: 50vh;
+                min-height: 300px;
+            }
+
+            .coach-video {
+                position: static;
+                width: 100%;
+                height: 150px;
+                margin: 1rem 0 0 0;
+                order: 2;
+            }
+
+            .video-controls {
+                position: relative;
+                bottom: auto;
+                left: auto;
+                transform: none;
+                margin: 1rem;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+
+            .control-btn {
+                width: 45px;
+                height: 45px;
+            }
+
+            .control-btn.screen-share {
+                width: auto;
+                padding: 0 1rem;
+            }
+
+            .session-tools {
+                order: 1;
+            }
+
+            .tool-tabs {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .tool-tab {
+                padding: 0.75rem 0.5rem;
+                font-size: 0.7rem;
+            }
+
+            .tool-content {
+                padding: 1.5rem;
+                height: auto;
+                max-height: 40vh;
+                overflow-y: auto;
+            }
+
+            .session-notes {
+                min-height: 150px;
+            }
+        }
+
+        /* Extra small devices */
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .login-card {
+                padding: 1rem;
+                margin: 0.5rem;
+            }
+
+            .demo-account-grid {
+                gap: 0.5rem;
+            }
+
+            .demo-account-btn {
+                padding: 0.75rem;
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+            }
+
+            .metric {
+                font-size: 1.5rem;
+            }
+
+            .dashboard-card {
+                padding: 1rem;
+            }
+
+            .breadcrumb-item {
+                min-width: 60px;
+            }
+
+            .breadcrumb-label {
+                display: none;
+            }
+
+            .tool-tabs {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .tool-tab {
+                flex-direction: column;
+                padding: 0.5rem 0.25rem;
+                font-size: 0.6rem;
+            }
+
+            .tool-tab i {
+                margin-bottom: 0.25rem;
+            }
+        }
+
+        /* Landscape orientation improvements */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .video-session {
+                grid-template-columns: 2fr 1fr;
+                height: 70vh;
+            }
+
+            .video-area {
+                height: 100%;
+            }
+
+            .coach-video {
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                width: 150px;
+                height: 100px;
+                order: initial;
+                margin: 0;
+            }
+
+            .session-tools {
+                order: initial;
+            }
+
+            .tool-content {
+                max-height: 60vh;
+            }
+        }
+
+        /* Horizontal scroll prevention */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Improved touch targets for mobile */
+        @media (hover: none) and (pointer: coarse) {
+            .btn, .option-card, .demo-account-btn, .stock-item, .client-item {
+                min-height: 48px;
+                padding: 1rem;
+            }
+
+            .btn-small {
+                min-height: 44px;
+                padding: 0.75rem 1rem;
+            }
+
+            .help-btn {
+                min-width: 44px;
+                min-height: 44px;
+                padding: 0.5rem;
+            }
+
+            .control-btn {
+                min-width: 48px;
+                min-height: 48px;
+            }
+
+            .tool-tab {
+                min-height: 60px;
             }
         }
 
@@ -1944,13 +2344,18 @@
     <header class="header">
         <nav class="nav">
             <div class="logo">NISBA</div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#" onclick="showScreen('welcome')" id="homeLink" style="display: none;">Home</a></li>
                 <li><a href="#" onclick="showDashboard()" id="dashboardLink" style="display: none;">Dashboard</a></li>
                 <li><a href="#" onclick="logout()" id="logoutLink" style="display: none;">Logout</a></li>
                 <li><a href="#" onclick="showScreen('login')" id="loginLink">Login</a></li>
                 <li><div class="demo-badge">DEMO VERSION</div></li>
             </ul>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+                <i class="fas fa-bars" id="mobileMenuIcon"></i>
+            </button>
+        </nav>
+        <div class="mobile-overlay" onclick="closeMobileMenu()"></div>
         </nav>
     </header>
 
@@ -3574,6 +3979,42 @@ Client seems confident about current strategy. Discussed:
             }
         }
 
+        // Mobile navigation functions
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const overlay = document.querySelector('.mobile-overlay');
+            const icon = document.getElementById('mobileMenuIcon');
+            
+            navLinks.classList.toggle('mobile-open');
+            overlay.classList.toggle('active');
+            
+            if (navLinks.classList.contains('mobile-open')) {
+                icon.className = 'fas fa-times';
+                document.body.style.overflow = 'hidden';
+            } else {
+                icon.className = 'fas fa-bars';
+                document.body.style.overflow = '';
+            }
+        }
+
+        function closeMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const overlay = document.querySelector('.mobile-overlay');
+            const icon = document.getElementById('mobileMenuIcon');
+            
+            navLinks.classList.remove('mobile-open');
+            overlay.classList.remove('active');
+            icon.className = 'fas fa-bars';
+            document.body.style.overflow = '';
+        }
+
+        // Close mobile menu when clicking nav links
+        function handleNavLinkClick() {
+            if (window.innerWidth <= 768) {
+                closeMobileMenu();
+            }
+        }
+
         // Navigation functions
         function showScreen(screenId) {
             // Check if user needs to be logged in for certain screens
@@ -3583,6 +4024,9 @@ Client seems confident about current strategy. Discussed:
                 showScreen('login');
                 return;
             }
+            
+            // Close mobile menu when navigating
+            handleNavLinkClick();
             
             document.querySelectorAll('.screen').forEach(screen => {
                 screen.classList.remove('active');
@@ -4134,9 +4578,10 @@ Client seems confident about current strategy. Discussed:
             
             // Enhanced keyboard navigation
             document.addEventListener('keydown', function(e) {
-                // Escape key closes notifications and tooltips
+                // Escape key closes notifications, tooltips, and mobile menu
                 if (e.key === 'Escape') {
                     document.querySelectorAll('.notification, .tooltip').forEach(el => el.remove());
+                    closeMobileMenu();
                 }
                 
                 // Tab navigation improvements
@@ -4149,6 +4594,13 @@ Client seems confident about current strategy. Discussed:
             // Remove keyboard navigation class on mouse use
             document.addEventListener('mousedown', function() {
                 document.body.classList.remove('keyboard-navigation');
+            });
+            
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    closeMobileMenu();
+                }
             });
         });
     </script>
