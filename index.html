@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NISBA - Halal Investment Platform Demo</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    
+
     <script type="text/javascript">(function(w,s){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://cdn-eu.pagesense.io/js/canvigroup131/eca4cfb85b8d4b93a30df9b8231b822c.js";var x=document.getElementsByTagName("script")[0];x.parentNode.insertBefore(e,x);})(window,"script");</script>
+    
     <style>
         * {
             margin: 0;
@@ -3954,6 +3955,385 @@
                 </div>
             </div>
         </div>
+            <div class="container">
+                <div class="report-container">
+                    <!-- Report Header -->
+                    <div class="report-header">
+                        <div class="report-title-section">
+                            <h1>Employee Financial Wellness Report</h1>
+                            <div class="report-subtitle">
+                                <span>TechCorp Ltd</span>
+                                <span class="report-period">Q4 2024 - Full Year Summary</span>
+                            </div>
+                        </div>
+                        <div class="report-actions">
+                            <button class="btn btn-secondary" onclick="exportReport('pdf')">
+                                <i class="fas fa-file-pdf" aria-hidden="true"></i> Export PDF
+                            </button>
+                            <button class="btn btn-secondary" onclick="exportReport('excel')">
+                                <i class="fas fa-file-excel" aria-hidden="true"></i> Export Excel
+                            </button>
+                            <button class="btn btn-primary" onclick="shareReport()">
+                                <i class="fas fa-share" aria-hidden="true"></i> Share Report
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Executive Summary -->
+                    <div class="report-section">
+                        <h2><i class="fas fa-chart-line" aria-hidden="true"></i> Executive Summary</h2>
+                        <div class="executive-summary">
+                            <div class="summary-grid">
+                                <div class="summary-card highlight">
+                                    <div class="summary-number">247</div>
+                                    <div class="summary-label">Total Employees Enrolled</div>
+                                    <div class="summary-change positive">+18% vs Q3</div>
+                                </div>
+                                <div class="summary-card">
+                                    <div class="summary-number">78%</div>
+                                    <div class="summary-label">Average Completion Rate</div>
+                                    <div class="summary-change positive">+12% vs Q3</div>
+                                </div>
+                                <div class="summary-card">
+                                    <div class="summary-number">4.7/5</div>
+                                    <div class="summary-label">Employee Satisfaction</div>
+                                    <div class="summary-change positive">+0.3 vs Q3</div>
+                                </div>
+                                <div class="summary-card">
+                                    <div class="summary-number">89%</div>
+                                    <div class="summary-label">Retention Rate</div>
+                                    <div class="summary-change positive">+7% vs industry</div>
+                                </div>
+                            </div>
+                            
+                            <div class="key-insights">
+                                <h3>Key Insights & Achievements</h3>
+                                <ul>
+                                    <li><strong>High Engagement:</strong> 89% of enrolled employees completed at least one module in Q4</li>
+                                    <li><strong>Retention Impact:</strong> Employees in the program showed 23% higher retention rates</li>
+                                    <li><strong>Diversity Success:</strong> 94% of Muslim employees report feeling more valued and included</li>
+                                    <li><strong>Knowledge Growth:</strong> Post-program assessments show 67% improvement in financial literacy</li>
+                                    <li><strong>Behavioral Change:</strong> 73% of participants increased their savings rate by average of 2.4%</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Department Performance -->
+                    <div class="report-section">
+                        <h2><i class="fas fa-building" aria-hidden="true"></i> Department Performance Analysis</h2>
+                        <div class="department-analysis">
+                            <div class="performance-chart">
+                                <h3>Completion Rates by Department</h3>
+                                <div class="chart-container">
+                                    <canvas id="departmentChart" width="400" height="200"></canvas>
+                                </div>
+                            </div>
+                            
+                            <div class="department-details">
+                                <div class="dept-card">
+                                    <div class="dept-header">
+                                        <h4>Engineering Department</h4>
+                                        <span class="dept-score excellent">A+</span>
+                                    </div>
+                                    <div class="dept-stats">
+                                        <div class="stat">
+                                            <span class="stat-label">Completion Rate</span>
+                                            <span class="stat-value">96%</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="stat-label">Satisfaction</span>
+                                            <span class="stat-value">4.8/5</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="stat-label">Coaching Uptake</span>
+                                            <span class="stat-value">40%</span>
+                                        </div>
+                                    </div>
+                                    <div class="dept-insights">
+                                        <p><strong>Top Performer:</strong> Highest engagement across all metrics. Strong peer learning culture.</p>
+                                    </div>
+                                </div>
+
+                                <div class="dept-card">
+                                    <div class="dept-header">
+                                        <h4>Marketing Department</h4>
+                                        <span class="dept-score good">A</span>
+                                    </div>
+                                    <div class="dept-stats">
+                                        <div class="stat">
+                                            <span class="stat-label">Completion Rate</span>
+                                            <span class="stat-value">91%</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="stat-label">Satisfaction</span>
+                                            <span class="stat-value">4.6/5</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="stat-label">Coaching Uptake</span>
+                                            <span class="stat-value">43%</span>
+                                        </div>
+                                    </div>
+                                    <div class="dept-insights">
+                                        <p><strong>High Collaboration:</strong> Excellent team learning sessions. Creative approach to financial planning.</p>
+                                    </div>
+                                </div>
+
+                                <div class="dept-card">
+                                    <div class="dept-header">
+                                        <h4>HR & Operations</h4>
+                                        <span class="dept-score needs-improvement">B</span>
+                                    </div>
+                                    <div class="dept-stats">
+                                        <div class="stat">
+                                            <span class="stat-label">Completion Rate</span>
+                                            <span class="stat-value">74%</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="stat-label">Satisfaction</span>
+                                            <span class="stat-value">4.4/5</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="stat-label">Coaching Uptake</span>
+                                            <span class="stat-value">30%</span>
+                                        </div>
+                                    </div>
+                                    <div class="dept-insights">
+                                        <p><strong>Opportunity Area:</strong> Time constraints due to operational demands. Recommend flexible scheduling.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Learning Progress -->
+                    <div class="report-section">
+                        <h2><i class="fas fa-graduation-cap" aria-hidden="true"></i> Learning & Development Progress</h2>
+                        <div class="learning-analysis">
+                            <div class="learning-overview">
+                                <div class="learning-stat">
+                                    <div class="learning-number">1,847</div>
+                                    <div class="learning-label">Total Learning Hours</div>
+                                    <div class="learning-detail">Average 7.5 hours per employee</div>
+                                </div>
+                                <div class="learning-stat">
+                                    <div class="learning-number">15</div>
+                                    <div class="learning-label">Active Learning Modules</div>
+                                    <div class="learning-detail">3 new modules this quarter</div>
+                                </div>
+                                <div class="learning-stat">
+                                    <div class="learning-number">89%</div>
+                                    <div class="learning-label">Knowledge Retention</div>
+                                    <div class="learning-detail">Measured via assessments</div>
+                                </div>
+                            </div>
+
+                            <div class="module-performance">
+                                <h3>Module Performance Rankings</h3>
+                                <div class="module-list">
+                                    <div class="module-item top-performer">
+                                        <div class="module-rank">1</div>
+                                        <div class="module-info">
+                                            <h4>Introduction to Halal Investing</h4>
+                                            <p>Foundation course covering Islamic finance principles</p>
+                                        </div>
+                                        <div class="module-metrics">
+                                            <span class="completion-rate">96% completion</span>
+                                            <span class="rating">4.9/5 rating</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="module-item">
+                                        <div class="module-rank">2</div>
+                                        <div class="module-info">
+                                            <h4>Zakat Calculation & Planning</h4>
+                                            <p>Advanced module on charitable giving optimization</p>
+                                        </div>
+                                        <div class="module-metrics">
+                                            <span class="completion-rate">87% completion</span>
+                                            <span class="rating">4.7/5 rating</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="module-item">
+                                        <div class="module-rank">3</div>
+                                        <div class="module-info">
+                                            <h4>Retirement Planning (Islamic)</h4>
+                                            <p>Long-term wealth building strategies</p>
+                                        </div>
+                                        <div class="module-metrics">
+                                            <span class="completion-rate">82% completion</span>
+                                            <span class="rating">4.6/5 rating</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DEI Impact -->
+                    <div class="report-section">
+                        <h2><i class="fas fa-users" aria-hidden="true"></i> Diversity, Equity & Inclusion Impact</h2>
+                        <div class="dei-analysis">
+                            <div class="dei-metrics">
+                                <div class="dei-card">
+                                    <h3>Religious Inclusion</h3>
+                                    <div class="dei-stat">
+                                        <span class="big-number">94%</span>
+                                        <span class="dei-label">of Muslim employees feel more valued</span>
+                                    </div>
+                                    <div class="dei-detail">Compared to 67% industry average</div>
+                                </div>
+
+                                <div class="dei-card">
+                                    <h3>Cross-Cultural Learning</h3>
+                                    <div class="dei-stat">
+                                        <span class="big-number">78%</span>
+                                        <span class="dei-label">of non-Muslim employees gained Islamic finance awareness</span>
+                                    </div>
+                                    <div class="dei-detail">Promoting cultural understanding</div>
+                                </div>
+
+                                <div class="dei-card">
+                                    <h3>Retention Improvement</h3>
+                                    <div class="dei-stat">
+                                        <span class="big-number">23%</span>
+                                        <span class="dei-label">higher retention in program participants</span>
+                                    </div>
+                                    <div class="dei-detail">Particularly strong among diverse talent</div>
+                                </div>
+                            </div>
+
+                            <div class="dei-testimonials">
+                                <h3>Employee Feedback</h3>
+                                <div class="testimonial-grid">
+                                    <blockquote class="testimonial">
+                                        <p>"Finally, a company that understands my values. The Islamic finance education shows real commitment to inclusion."</p>
+                                        <cite>- Senior Software Engineer</cite>
+                                    </blockquote>
+                                    <blockquote class="testimonial">
+                                        <p>"I learned so much about ethical investing. It's made me a better financial planner for all our employees."</p>
+                                        <cite>- HR Business Partner</cite>
+                                    </blockquote>
+                                    <blockquote class="testimonial">
+                                        <p>"The coaching helped me align my investments with my faith. I'm more confident about my financial future."</p>
+                                        <cite>- Marketing Manager</cite>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ROI Analysis -->
+                    <div class="report-section">
+                        <h2><i class="fas fa-pound-sign" aria-hidden="true"></i> Return on Investment Analysis</h2>
+                        <div class="roi-analysis">
+                            <div class="roi-summary">
+                                <div class="roi-card primary">
+                                    <h3>Program Investment</h3>
+                                    <div class="roi-amount">£47,500</div>
+                                    <div class="roi-detail">Annual program cost</div>
+                                </div>
+                                <div class="roi-card success">
+                                    <h3>Calculated Savings</h3>
+                                    <div class="roi-amount">£142,800</div>
+                                    <div class="roi-detail">From reduced turnover & increased productivity</div>
+                                </div>
+                                <div class="roi-card highlight">
+                                    <h3>Net ROI</h3>
+                                    <div class="roi-amount">201%</div>
+                                    <div class="roi-detail">3:1 return on investment</div>
+                                </div>
+                            </div>
+
+                            <div class="roi-breakdown">
+                                <h3>ROI Breakdown</h3>
+                                <div class="roi-items">
+                                    <div class="roi-item">
+                                        <span class="roi-category">Reduced Turnover</span>
+                                        <span class="roi-saving">£89,200</span>
+                                        <span class="roi-note">23% retention improvement × avg replacement cost</span>
+                                    </div>
+                                    <div class="roi-item">
+                                        <span class="roi-category">Increased Productivity</span>
+                                        <span class="roi-saving">£34,600</span>
+                                        <span class="roi-note">Employee engagement correlation studies</span>
+                                    </div>
+                                    <div class="roi-item">
+                                        <span class="roi-category">Reduced Recruitment</span>
+                                        <span class="roi-saving">£19,000</span>
+                                        <span class="roi-note">Lower hiring needs due to retention</span>
+                                    </div>
+                                    <div class="roi-item total">
+                                        <span class="roi-category">Total Benefit</span>
+                                        <span class="roi-saving">£142,800</span>
+                                        <span class="roi-note">Annualized savings</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recommendations -->
+                    <div class="report-section">
+                        <h2><i class="fas fa-lightbulb" aria-hidden="true"></i> Strategic Recommendations</h2>
+                        <div class="recommendations">
+                            <div class="recommendation priority-high">
+                                <div class="rec-header">
+                                    <span class="rec-priority">HIGH PRIORITY</span>
+                                    <h3>Expand to All Departments</h3>
+                                </div>
+                                <p>Roll out program to remaining 150 employees in Sales and Customer Success teams. Expected completion by Q2 2025.</p>
+                                <div class="rec-impact">
+                                    <span>Expected Impact: +£67K annual savings</span>
+                                </div>
+                            </div>
+
+                            <div class="recommendation priority-medium">
+                                <div class="rec-header">
+                                    <span class="rec-priority">MEDIUM PRIORITY</span>
+                                    <h3>Advanced Coaching Program</h3>
+                                </div>
+                                <p>Introduce 1:1 coaching for senior leadership and high-performers. Focus on advanced investment strategies and wealth building.</p>
+                                <div class="rec-impact">
+                                    <span>Expected Impact: Enhanced leadership retention</span>
+                                </div>
+                            </div>
+
+                            <div class="recommendation priority-low">
+                                <div class="rec-header">
+                                    <span class="rec-priority">FUTURE CONSIDERATION</span>
+                                    <h3>Family Financial Planning</h3>
+                                </div>
+                                <p>Extend program benefits to employee families. Include spouse financial literacy and children's education planning modules.</p>
+                                <div class="rec-impact">
+                                    <span>Expected Impact: Deeper employee loyalty</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Report Footer -->
+                    <div class="report-footer">
+                        <div class="footer-content">
+                            <div class="report-meta">
+                                <p><strong>Report Generated:</strong> January 15, 2025</p>
+                                <p><strong>Data Period:</strong> January 1, 2024 - December 31, 2024</p>
+                                <p><strong>Next Review:</strong> April 15, 2025</p>
+                            </div>
+                            <div class="footer-actions">
+                                <button class="btn btn-secondary" onclick="showScreen('corporate-dashboard')">
+                                    <i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Dashboard
+                                </button>
+                                <button class="btn btn-primary" onclick="scheduleReview()">
+                                    <i class="fas fa-calendar-plus" aria-hidden="true"></i> Schedule Review Meeting
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Coach Dashboard Screen -->
         <div id="coach-dashboard" class="screen">
@@ -4157,6 +4537,493 @@
 
         <!-- Individual Financial Report Screen -->
         <div id="individual-report" class="screen">
+            <div class="container">
+                <div class="report-container">
+                    <!-- Personal Report Header -->
+                    <div class="personal-report-header">
+                        <div class="personal-title-section">
+                            <div class="greeting-section">
+                                <h1>Your Financial Journey Report</h1>
+                                <div class="personal-greeting">
+                                    <span class="greeting-text">Assalamu Alaikum, <span id="reportUserName">Ahmad</span></span>
+                                    <span class="report-period">December 2024 Summary</span>
+                                </div>
+                            </div>
+                            <div class="islamic-quote">
+                                <i class="fas fa-quote-left" aria-hidden="true"></i>
+                                <p>"And it is He who gives life and causes death, and His is the alternation of night and day. Then will you not reason?"</p>
+                                <cite>Qur'an 23:80</cite>
+                            </div>
+                        </div>
+                        <div class="personal-actions">
+                            <button class="btn btn-secondary" onclick="exportPersonalReport('pdf')">
+                                <i class="fas fa-download" aria-hidden="true"></i> Download PDF
+                            </button>
+                            <button class="btn btn-secondary" onclick="shareWithCoach()">
+                                <i class="fas fa-share-alt" aria-hidden="true"></i> Share with Coach
+                            </button>
+                            <button class="btn btn-primary" onclick="scheduleCoaching()">
+                                <i class="fas fa-calendar-plus" aria-hidden="true"></i> Book Coaching
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Performance Overview -->
+                    <div class="report-section">
+                        <h2><i class="fas fa-chart-line" aria-hidden="true"></i> Portfolio Performance</h2>
+                        <div class="portfolio-overview">
+                            <div class="portfolio-summary">
+                                <div class="portfolio-card primary">
+                                    <div class="portfolio-icon">
+                                        <i class="fas fa-wallet" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="portfolio-content">
+                                        <div class="portfolio-value">£12,847</div>
+                                        <div class="portfolio-label">Total Portfolio Value</div>
+                                        <div class="portfolio-change positive">+£1,234 (+10.6%) this month</div>
+                                    </div>
+                                </div>
+
+                                <div class="portfolio-card">
+                                    <div class="portfolio-icon">
+                                        <i class="fas fa-trending-up" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="portfolio-content">
+                                        <div class="portfolio-value">+7.2%</div>
+                                        <div class="portfolio-label">Monthly Return</div>
+                                        <div class="portfolio-benchmark">vs +4.1% FTSE Shariah</div>
+                                    </div>
+                                </div>
+
+                                <div class="portfolio-card">
+                                    <div class="portfolio-icon">
+                                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="portfolio-content">
+                                        <div class="portfolio-value">100%</div>
+                                        <div class="portfolio-label">Shariah Compliant</div>
+                                        <div class="portfolio-benchmark">All investments screened</div>
+                                    </div>
+                                </div>
+
+                                <div class="portfolio-card">
+                                    <div class="portfolio-icon">
+                                        <i class="fas fa-chart-pie" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="portfolio-content">
+                                        <div class="portfolio-value">Moderate</div>
+                                        <div class="portfolio-label">Risk Level</div>
+                                        <div class="portfolio-benchmark">Balanced allocation</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="allocation-breakdown">
+                                <h3>Asset Allocation</h3>
+                                <div class="allocation-chart">
+                                    <div class="allocation-item">
+                                        <div class="allocation-bar">
+                                            <div class="allocation-fill equity" style="width: 60%"></div>
+                                        </div>
+                                        <div class="allocation-details">
+                                            <span class="allocation-type">Halal Equities</span>
+                                            <span class="allocation-percentage">60%</span>
+                                            <span class="allocation-amount">£7,708</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="allocation-item">
+                                        <div class="allocation-bar">
+                                            <div class="allocation-fill sukuk" style="width: 25%"></div>
+                                        </div>
+                                        <div class="allocation-details">
+                                            <span class="allocation-type">Sukuk Bonds</span>
+                                            <span class="allocation-percentage">25%</span>
+                                            <span class="allocation-amount">£3,212</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="allocation-item">
+                                        <div class="allocation-bar">
+                                            <div class="allocation-fill commodities" style="width: 10%"></div>
+                                        </div>
+                                        <div class="allocation-details">
+                                            <span class="allocation-type">Gold & Commodities</span>
+                                            <span class="allocation-percentage">10%</span>
+                                            <span class="allocation-amount">£1,285</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="allocation-item">
+                                        <div class="allocation-bar">
+                                            <div class="allocation-fill cash" style="width: 5%"></div>
+                                        </div>
+                                        <div class="allocation-details">
+                                            <span class="allocation-type">Cash/Savings</span>
+                                            <span class="allocation-percentage">5%</span>
+                                            <span class="allocation-amount">£642</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="performance-insights">
+                            <h3>Performance Insights</h3>
+                            <div class="insight-grid">
+                                <div class="insight-card positive">
+                                    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+                                    <div class="insight-content">
+                                        <h4>Strong Monthly Performance</h4>
+                                        <p>Your portfolio outperformed the FTSE Shariah index by 3.1% this month, driven by strong tech sector holdings.</p>
+                                    </div>
+                                </div>
+
+                                <div class="insight-card neutral">
+                                    <i class="fas fa-balance-scale" aria-hidden="true"></i>
+                                    <div class="insight-content">
+                                        <h4>Well-Balanced Allocation</h4>
+                                        <p>Your current asset mix aligns well with your moderate risk tolerance and investment timeline.</p>
+                                    </div>
+                                </div>
+
+                                <div class="insight-card suggestion">
+                                    <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                                    <div class="insight-content">
+                                        <h4>Rebalancing Opportunity</h4>
+                                        <p>Consider increasing Sukuk allocation to 30% for better diversification as equity positions have grown.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Goals Progress -->
+                    <div class="report-section">
+                        <h2><i class="fas fa-target" aria-hidden="true"></i> Financial Goals Progress</h2>
+                        <div class="goals-overview">
+                            <div class="primary-goal">
+                                <div class="goal-header">
+                                    <h3>Primary Goal: House Deposit</h3>
+                                    <span class="goal-target">£45,000 target by July 2026</span>
+                                </div>
+                                <div class="goal-progress-section">
+                                    <div class="goal-visual">
+                                        <div class="goal-circle">
+                                            <div class="goal-percentage">68%</div>
+                                            <div class="goal-label">Complete</div>
+                                        </div>
+                                    </div>
+                                    <div class="goal-details">
+                                        <div class="goal-stat">
+                                            <span class="stat-value">£30,600</span>
+                                            <span class="stat-label">Current Progress</span>
+                                        </div>
+                                        <div class="goal-stat">
+                                            <span class="stat-value">£14,400</span>
+                                            <span class="stat-label">Remaining Needed</span>
+                                        </div>
+                                        <div class="goal-stat">
+                                            <span class="stat-value">£850/month</span>
+                                            <span class="stat-label">Required Savings</span>
+                                        </div>
+                                        <div class="goal-stat">
+                                            <span class="stat-value">18 months</span>
+                                            <span class="stat-label">Time Remaining</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="goal-projection">
+                                    <div class="projection-status on-track">
+                                        <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                        <span>On Track</span>
+                                    </div>
+                                    <p>Based on your current savings rate of £950/month, you're ahead of schedule to reach your goal by May 2026.</p>
+                                </div>
+                            </div>
+
+                            <div class="secondary-goals">
+                                <h3>Other Financial Goals</h3>
+                                <div class="goal-list">
+                                    <div class="goal-item">
+                                        <div class="goal-icon">
+                                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="goal-info">
+                                            <h4>Children's Education Fund</h4>
+                                            <p>£50,000 by 2035</p>
+                                        </div>
+                                        <div class="goal-progress-mini">
+                                            <div class="progress-bar-mini">
+                                                <div class="progress-fill-mini" style="width: 23%"></div>
+                                            </div>
+                                            <span class="progress-text">23% (£11,500)</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="goal-item">
+                                        <div class="goal-icon">
+                                            <i class="fas fa-umbrella" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="goal-info">
+                                            <h4>Emergency Fund</h4>
+                                            <p>6 months expenses (£18,000)</p>
+                                        </div>
+                                        <div class="goal-progress-mini">
+                                            <div class="progress-bar-mini">
+                                                <div class="progress-fill-mini" style="width: 89%"></div>
+                                            </div>
+                                            <span class="progress-text">89% (£16,020)</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="goal-item">
+                                        <div class="goal-icon">
+                                            <i class="fas fa-sun" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="goal-info">
+                                            <h4>Retirement Planning</h4>
+                                            <p>£500,000 by age 65</p>
+                                        </div>
+                                        <div class="goal-progress-mini">
+                                            <div class="progress-bar-mini">
+                                                <div class="progress-fill-mini" style="width: 8%"></div>
+                                            </div>
+                                            <span class="progress-text">8% (£38,200)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Zakat & Charitable Giving -->
+                    <div class="report-section">
+                        <h2><i class="fas fa-hands-helping" aria-hidden="true"></i> Zakat & Charitable Giving</h2>
+                        <div class="zakat-analysis">
+                            <div class="zakat-summary">
+                                <div class="zakat-card primary">
+                                    <div class="zakat-amount">£321</div>
+                                    <div class="zakat-label">Annual Zakat Due</div>
+                                    <div class="zakat-detail">Based on current wealth of £12,847</div>
+                                </div>
+
+                                <div class="zakat-card">
+                                    <div class="zakat-amount">£27</div>
+                                    <div class="zakat-label">Monthly Provision</div>
+                                    <div class="zakat-detail">Recommended monthly saving</div>
+                                </div>
+
+                                <div class="zakat-card">
+                                    <div class="zakat-amount">£189</div>
+                                    <div class="zakat-label">Paid This Year</div>
+                                    <div class="zakat-detail">59% of annual obligation</div>
+                                </div>
+                            </div>
+
+                            <div class="zakat-breakdown">
+                                <h3>Zakat Calculation Breakdown</h3>
+                                <div class="calculation-table">
+                                    <div class="calc-row">
+                                        <span class="calc-item">Investment Portfolio</span>
+                                        <span class="calc-amount">£12,847</span>
+                                    </div>
+                                    <div class="calc-row">
+                                        <span class="calc-item">Cash & Savings</span>
+                                        <span class="calc-amount">£2,180</span>
+                                    </div>
+                                    <div class="calc-row">
+                                        <span class="calc-item">Gold Holdings</span>
+                                        <span class="calc-amount">£1,285</span>
+                                    </div>
+                                    <div class="calc-row total">
+                                        <span class="calc-item">Total Zakatable Wealth</span>
+                                        <span class="calc-amount">£16,312</span>
+                                    </div>
+                                    <div class="calc-row nisab">
+                                        <span class="calc-item">Nisab Threshold (2024)</span>
+                                        <span class="calc-amount">£3,427</span>
+                                    </div>
+                                    <div class="calc-row zakat-due">
+                                        <span class="calc-item">Zakat Due (2.5%)</span>
+                                        <span class="calc-amount">£408</span>
+                                    </div>
+                                </div>
+
+                                <div class="zakat-recommendations">
+                                    <h4>Charitable Giving Recommendations</h4>
+                                    <div class="recommendation-list">
+                                        <div class="charity-rec">
+                                            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                                            <span>Set up monthly Zakat provision of £34 to spread payments</span>
+                                        </div>
+                                        <div class="charity-rec">
+                                            <i class="fas fa-heart" aria-hidden="true"></i>
+                                            <span>Consider additional Sadaqah of £50/month for extra spiritual reward</span>
+                                        </div>
+                                        <div class="charity-rec">
+                                            <i class="fas fa-mosque" aria-hidden="true"></i>
+                                            <span>Ramadan giving opportunity: £120 remaining can be distributed during Ramadan</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Learning & Coaching Progress -->
+                    <div class="report-section">
+                        <h2><i class="fas fa-graduation-cap" aria-hidden="true"></i> Learning & Coaching Journey</h2>
+                        <div class="learning-progress">
+                            <div class="learning-stats">
+                                <div class="learning-card">
+                                    <div class="learning-number">85%</div>
+                                    <div class="learning-label">Course Completion</div>
+                                    <div class="learning-detail">8 of 10 modules completed</div>
+                                </div>
+
+                                <div class="learning-card">
+                                    <div class="learning-number">12</div>
+                                    <div class="learning-label">Coaching Sessions</div>
+                                    <div class="learning-detail">With Coach Amina Hassan</div>
+                                </div>
+
+                                <div class="learning-card">
+                                    <div class="learning-number">47hrs</div>
+                                    <div class="learning-label">Learning Time</div>
+                                    <div class="learning-detail">Total time invested</div>
+                                </div>
+
+                                <div class="learning-card">
+                                    <div class="learning-number">4.9/5</div>
+                                    <div class="learning-label">Knowledge Score</div>
+                                    <div class="learning-detail">Latest assessment</div>
+                                </div>
+                            </div>
+
+                            <div class="coaching-summary">
+                                <h3>Recent Coaching Highlights</h3>
+                                <div class="coaching-timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">Dec 15, 2024</div>
+                                        <div class="timeline-content">
+                                            <h4>Portfolio Rebalancing Session</h4>
+                                            <p>Reviewed asset allocation and adjusted Sukuk holdings for better diversification. Set up automatic rebalancing.</p>
+                                            <div class="timeline-actions">
+                                                <span class="action-item completed">✓ Increase Sukuk allocation to 25%</span>
+                                                <span class="action-item completed">✓ Set up monthly investment automation</span>
+                                                <span class="action-item pending">⏳ Research ESG screening options</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">Nov 28, 2024</div>
+                                        <div class="timeline-content">
+                                            <h4>Goal Setting & Planning</h4>
+                                            <p>Established house deposit goal timeline and calculated required monthly savings. Created emergency fund strategy.</p>
+                                            <div class="timeline-actions">
+                                                <span class="action-item completed">✓ Set house deposit target of £45,000</span>
+                                                <span class="action-item completed">✓ Increase monthly savings to £950</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="next-session">
+                                    <div class="session-card">
+                                        <div class="session-icon">
+                                            <i class="fas fa-video" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="session-details">
+                                            <h4>Next Coaching Session</h4>
+                                            <p>January 15, 2025 at 2:00 PM</p>
+                                            <p><strong>Topic:</strong> Zakat optimization and tax planning</p>
+                                        </div>
+                                        <button class="btn btn-primary" onclick="joinCoachingCall()">
+                                            <i class="fas fa-video" aria-hidden="true"></i> Join Call
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Items & Recommendations -->
+                    <div class="report-section">
+                        <h2><i class="fas fa-tasks" aria-hidden="true"></i> Personalized Action Items</h2>
+                        <div class="personal-recommendations">
+                            <div class="action-priority high">
+                                <div class="action-header">
+                                    <span class="action-priority-label">THIS WEEK</span>
+                                    <h3>Complete Emergency Fund</h3>
+                                </div>
+                                <p>You're 89% of the way to your emergency fund goal. Add £1,980 to reach your 6-month expense target.</p>
+                                <div class="action-steps">
+                                    <div class="step">
+                                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                        <span>Transfer £1,980 from current account to emergency savings</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="action-priority medium">
+                                <div class="action-header">
+                                    <span class="action-priority-label">THIS MONTH</span>
+                                    <h3>Optimize Zakat Planning</h3>
+                                </div>
+                                <p>Set up automated monthly Zakat provisions to spread your charitable giving throughout the year.</p>
+                                <div class="action-steps">
+                                    <div class="step">
+                                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                        <span>Set up £34/month direct debit to charity account</span>
+                                    </div>
+                                    <div class="step">
+                                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                        <span>Review and update beneficiary charities</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="action-priority low">
+                                <div class="action-header">
+                                    <span class="action-priority-label">NEXT QUARTER</span>
+                                    <h3>Explore Islamic Property Investment</h3>
+                                </div>
+                                <p>Research Shariah-compliant real estate investment options as your portfolio grows beyond £15,000.</p>
+                                <div class="action-steps">
+                                    <div class="step">
+                                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                        <span>Research Islamic REIT options</span>
+                                    </div>
+                                    <div class="step">
+                                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                        <span>Discuss property investment with coach</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Personal Report Footer -->
+                    <div class="personal-report-footer">
+                        <div class="footer-blessing">
+                            <i class="fas fa-quote-left" aria-hidden="true"></i>
+                            <p>"And whoever relies upon Allah - then He is sufficient for him. Indeed, Allah will accomplish His purpose."</p>
+                            <cite>Qur'an 65:3</cite>
+                        </div>
+                        <div class="footer-actions">
+                            <button class="btn btn-secondary" onclick="showScreen('dashboard')">
+                                <i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Dashboard
+                            </button>
+                            <button class="btn btn-primary" onclick="scheduleCoaching()">
+                                <i class="fas fa-calendar-plus" aria-hidden="true"></i> Schedule Next Session
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
             <div class="container">
                 <div class="report-container">
                     <!-- Personal Report Header -->
