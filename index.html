@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NISBA - Halal Investment Platform Demo</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-   
-     <script type="text/javascript">(function(w,s){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://cdn-eu.pagesense.io/js/canvigroup131/eca4cfb85b8d4b93a30df9b8231b822c.js";var x=document.getElementsByTagName("script")[0];x.parentNode.insertBefore(e,x);})(window,"script");</script>
+    
+  <script type="text/javascript">(function(w,s){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://cdn-eu.pagesense.io/js/canvigroup131/eca4cfb85b8d4b93a30df9b8231b822c.js";var x=document.getElementsByTagName("script")[0];x.parentNode.insertBefore(e,x);})(window,"script");</script>
+
     <style>
         * {
             margin: 0;
@@ -716,1683 +717,602 @@
             outline-offset: 2px;
         }
 
-        /* Corporate Report Styles */
-        .report-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-            background: white;
-            min-height: calc(100vh - 140px);
-        }
-
-        .report-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 3rem;
-            padding-bottom: 2rem;
-            border-bottom: 2px solid var(--primary-blue);
-        }
-
-        .report-title-section h1 {
-            font-size: 2.5rem;
-            color: var(--primary-blue);
-            margin: 0 0 0.5rem 0;
-            font-weight: 700;
-        }
-
-        .report-subtitle {
-            display: flex;
-            flex-direction: column;
-            gap: 0.25rem;
-        }
-
-        .report-subtitle span:first-child {
-            font-size: 1.2rem;
-            color: var(--warm-gray);
-            font-weight: 600;
-        }
-
-        .report-period {
-            font-size: 1rem;
-            color: var(--light-gray);
-        }
-
-        .report-actions {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .report-actions .btn {
-            padding: 0.75rem 1.5rem;
-            font-size: 0.9rem;
-        }
-
-        /* Report Sections */
-        .report-section {
-            margin-bottom: 3rem;
-            padding: 2rem;
-            background: #FAFBFC;
-            border-radius: 15px;
-            border-left: 5px solid var(--primary-blue);
-        }
-
-        .report-section h2 {
-            font-size: 1.8rem;
-            color: var(--primary-blue);
-            margin: 0 0 2rem 0;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .report-section h2 i {
-            font-size: 1.5rem;
-        }
-
-        /* Executive Summary */
-        .summary-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .summary-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-        }
-
-        .summary-card.highlight {
-            border-color: var(--primary-blue);
-            background: var(--light-blue);
-        }
-
-        .summary-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .summary-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: var(--primary-blue);
-            margin-bottom: 0.5rem;
-        }
-
-        .summary-label {
-            color: var(--warm-gray);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .summary-change {
-            font-size: 0.9rem;
-            font-weight: 600;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-        }
-
-        .summary-change.positive {
-            background: #D1FAE5;
-            color: #065F46;
-        }
-
-        .key-insights {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-
-        .key-insights h3 {
-            color: var(--primary-blue);
-            margin: 0 0 1rem 0;
-            font-size: 1.3rem;
-        }
-
-        .key-insights ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .key-insights li {
-            padding: 0.75rem 0;
-            border-bottom: 1px solid #F3F4F6;
-            line-height: 1.6;
-        }
-
-        .key-insights li:last-child {
-            border-bottom: none;
-        }
-
-        /* Department Analysis */
-        .department-analysis {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-
-        .performance-chart {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-
-        .performance-chart h3 {
-            color: var(--warm-gray);
-            margin: 0 0 1.5rem 0;
-            text-align: center;
-        }
-
-        .chart-container {
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #F8FAFC;
-            border-radius: 8px;
-            color: var(--light-gray);
-            font-style: italic;
-        }
-
-        .department-details {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .dept-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-
-        .dept-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-
-        .dept-header h4 {
-            margin: 0;
-            color: var(--warm-gray);
-        }
-
-        .dept-score {
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
-
-        .dept-score.excellent {
-            background: #D1FAE5;
-            color: #065F46;
-        }
-
-        .dept-score.good {
-            background: #DBEAFE;
-            color: var(--primary-blue);
-        }
-
-        .dept-score.needs-improvement {
-            background: #FEF3C7;
-            color: #92400E;
-        }
-
-        .dept-stats {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 1rem;
-        }
-
-        .stat {
-            text-align: center;
-        }
-
-        .stat-label {
-            display: block;
-            font-size: 0.8rem;
-            color: var(--light-gray);
-            margin-bottom: 0.25rem;
-        }
-
-        .stat-value {
-            font-weight: bold;
-            color: var(--primary-blue);
-            font-size: 1.1rem;
-        }
-
-        .dept-insights {
-            font-size: 0.9rem;
-            color: var(--warm-gray);
-            line-height: 1.5;
-        }
-
-        /* Learning Analysis */
-        .learning-overview {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .learning-stat {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            text-align: center;
-        }
-
-        .learning-number {
-            font-size: 2.2rem;
-            font-weight: bold;
-            color: var(--primary-blue);
-            margin-bottom: 0.5rem;
-        }
-
-        .learning-label {
-            color: var(--warm-gray);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .learning-detail {
-            font-size: 0.9rem;
-            color: var(--light-gray);
-        }
-
-        .module-performance {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-
-        .module-performance h3 {
-            color: var(--warm-gray);
-            margin: 0 0 1.5rem 0;
-        }
-
-        .module-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .module-item {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            padding: 1.5rem;
-            background: #F8FAFC;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .module-item.top-performer {
-            background: var(--light-blue);
-            border: 2px solid var(--primary-blue);
-        }
-
-        .module-item:hover {
-            transform: translateX(5px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .module-rank {
-            background: var(--primary-blue);
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .module-info {
-            flex: 1;
-        }
-
-        .module-info h4 {
-            margin: 0 0 0.25rem 0;
-            color: var(--warm-gray);
-        }
-
-        .module-info p {
-            margin: 0;
-            color: var(--light-gray);
-            font-size: 0.9rem;
-        }
-
-        .module-metrics {
-            display: flex;
-            flex-direction: column;
-            gap: 0.25rem;
-            text-align: right;
-        }
-
-        .completion-rate, .rating {
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        .completion-rate {
-            color: var(--success-green);
-        }
-
-        .rating {
-            color: var(--accent-gold);
-        }
-
-        /* DEI Analysis */
-        .dei-metrics {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .dei-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            text-align: center;
-        }
-
-        .dei-card h3 {
-            color: var(--primary-blue);
-            margin: 0 0 1rem 0;
-            font-size: 1.1rem;
-        }
-
-        .dei-stat {
-            margin-bottom: 1rem;
-        }
-
-        .big-number {
-            display: block;
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: var(--primary-blue);
-            margin-bottom: 0.5rem;
-        }
-
-        .dei-label {
-            display: block;
-            color: var(--warm-gray);
-            font-weight: 600;
-            line-height: 1.4;
-        }
-
-        .dei-detail {
-            font-size: 0.9rem;
-            color: var(--light-gray);
-            font-style: italic;
-        }
-
-        .dei-testimonials {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-
-        .dei-testimonials h3 {
-            color: var(--warm-gray);
-            margin: 0 0 1.5rem 0;
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .testimonial {
-            background: #F8FAFC;
-            padding: 1.5rem;
-            border-radius: 10px;
-            border-left: 4px solid var(--primary-blue);
-            margin: 0;
-            font-style: italic;
-            line-height: 1.6;
-        }
-
-        .testimonial p {
-            margin: 0 0 1rem 0;
-            color: var(--warm-gray);
-        }
-
-        .testimonial cite {
-            color: var(--light-gray);
-            font-size: 0.9rem;
-            font-style: normal;
-            font-weight: 600;
-        }
-
-        /* ROI Analysis */
-        .roi-summary {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .roi-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            border: 2px solid transparent;
-        }
-
-        .roi-card.primary {
-            border-color: var(--light-gray);
-        }
-
-        .roi-card.success {
-            border-color: var(--success-green);
-            background: #F0FDF4;
-        }
-
-        .roi-card.highlight {
-            border-color: var(--primary-blue);
-            background: var(--light-blue);
-        }
-
-        .roi-card h3 {
-            margin: 0 0 1rem 0;
-            color: var(--warm-gray);
-            font-size: 1.1rem;
-        }
-
-        .roi-amount {
-            font-size: 2.2rem;
-            font-weight: bold;
-            color: var(--primary-blue);
-            margin-bottom: 0.5rem;
-        }
-
-        .roi-detail {
-            color: var(--light-gray);
-            font-size: 0.9rem;
-        }
-
-        .roi-breakdown {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-
-        .roi-breakdown h3 {
-            color: var(--warm-gray);
-            margin: 0 0 1.5rem 0;
-        }
-
-        .roi-items {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .roi-item {
-            display: grid;
-            grid-template-columns: 2fr 1fr 2fr;
-            gap: 1rem;
-            padding: 1rem;
-            background: #F8FAFC;
-            border-radius: 8px;
-            align-items: center;
-        }
-
-        .roi-item.total {
-            background: var(--light-blue);
-            border: 2px solid var(--primary-blue);
-            font-weight: bold;
-        }
-
-        .roi-category {
-            color: var(--warm-gray);
-            font-weight: 600;
-        }
-
-        .roi-saving {
-            color: var(--success-green);
-            font-weight: bold;
-            font-size: 1.1rem;
-            text-align: center;
-        }
-
-        .roi-note {
-            color: var(--light-gray);
-            font-size: 0.9rem;
-        }
-
-        /* Recommendations */
-        .recommendations {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .recommendation {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            border-left: 5px solid #E5E7EB;
-        }
-
-        .recommendation.priority-high {
-            border-left-color: #EF4444;
-        }
-
-        .recommendation.priority-medium {
-            border-left-color: #F59E0B;
-        }
-
-        .recommendation.priority-low {
-            border-left-color: var(--light-gray);
-        }
-
-        .rec-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-
-        .rec-priority {
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: bold;
-        }
-
-        .priority-high .rec-priority {
-            background: #FEE2E2;
-            color: #991B1B;
-        }
-
-        .priority-medium .rec-priority {
-            background: #FEF3C7;
-            color: #92400E;
-        }
-
-        .priority-low .rec-priority {
-            background: #F3F4F6;
-            color: var(--light-gray);
-        }
-
-        .rec-header h3 {
-            margin: 0;
-            color: var(--warm-gray);
-        }
-
-        .recommendation p {
-            margin: 0 0 1rem 0;
-            color: var(--warm-gray);
-            line-height: 1.6;
-        }
-
-        .rec-impact {
-            font-size: 0.9rem;
-            color: var(--primary-blue);
-            font-weight: 600;
-        }
-
-        /* Report Footer */
-        .report-footer {
-            margin-top: 3rem;
-            padding: 2rem;
-            background: var(--light-blue);
-            border-radius: 15px;
-            border: 2px solid var(--primary-blue);
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .report-meta {
-            color: var(--warm-gray);
-        }
-
-        .report-meta p {
-            margin: 0.25rem 0;
-            font-size: 0.9rem;
-        }
-
-        .footer-actions {
-            display: flex;
-            gap: 1rem;
-        }
-
-        /* Responsive Report Design */
-        @media (max-width: 1024px) {
-            .department-analysis {
-                grid-template-columns: 1fr;
-            }
-
-            .report-header {
-                flex-direction: column;
-                gap: 1.5rem;
-                text-align: center;
-            }
-
-            .footer-content {
-                flex-direction: column;
-                gap: 1.5rem;
-                text-align: center;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .report-container {
-                padding: 1rem;
-            }
-
-            .report-section {
-                padding: 1.5rem;
-            }
-
-            .summary-grid, .dei-metrics, .roi-summary {
-                grid-template-columns: 1fr;
-            }
-
-            .testimonial-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .roi-item {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 0.5rem;
-            }
-
-            .dept-stats {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .module-item {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .rec-header {
-                flex-direction: column;
-                gap: 0.5rem;
-                text-align: center;
-            }
-        }
-
-        /* Personal Financial Report Styles */
-        .personal-report-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 3rem;
-            padding: 2rem;
-            background: linear-gradient(135deg, var(--light-blue), #F0F9FF);
-            border-radius: 20px;
-            border: 2px solid var(--primary-blue);
-        }
-
-        .greeting-section h1 {
-            font-size: 2.2rem;
-            color: var(--primary-blue);
-            margin: 0 0 1rem 0;
-            font-weight: 700;
-        }
-
-        .personal-greeting {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .greeting-text {
-            font-size: 1.3rem;
-            color: var(--warm-gray);
-            font-weight: 600;
-        }
-
-        .islamic-quote {
-            max-width: 300px;
-            text-align: right;
+        /* Clickable Card Styles */
+        .clickable-card {
+            cursor: pointer;
             position: relative;
-        }
-
-        .islamic-quote i {
-            font-size: 1.5rem;
-            color: var(--primary-blue);
-            opacity: 0.3;
-            margin-bottom: 1rem;
-        }
-
-        .islamic-quote p {
-            font-style: italic;
-            color: var(--warm-gray);
-            line-height: 1.5;
-            margin: 0 0 0.5rem 0;
-            font-size: 0.95rem;
-        }
-
-        .islamic-quote cite {
-            color: var(--primary-blue);
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        .personal-actions {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        /* Portfolio Overview */
-        .portfolio-summary {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .portfolio-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .portfolio-card.primary {
-            border-color: var(--primary-blue);
-            background: var(--light-blue);
-        }
-
-        .portfolio-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .portfolio-icon {
-            background: var(--primary-blue);
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-        }
-
-        .portfolio-content {
-            flex: 1;
-        }
-
-        .portfolio-value {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--primary-blue);
-            margin-bottom: 0.25rem;
-        }
-
-        .portfolio-label {
-            color: var(--warm-gray);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .portfolio-change {
-            font-size: 0.9rem;
-            font-weight: 600;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-        }
-
-        .portfolio-change.positive {
-            background: #D1FAE5;
-            color: #065F46;
-        }
-
-        .portfolio-benchmark {
-            font-size: 0.9rem;
-            color: var(--light-gray);
-        }
-
-        /* Asset Allocation */
-        .allocation-breakdown {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-
-        .allocation-breakdown h3 {
-            color: var(--warm-gray);
-            margin: 0 0 1.5rem 0;
-            text-align: center;
-        }
-
-        .allocation-chart {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .allocation-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .allocation-bar {
-            flex: 1;
-            height: 12px;
-            background: #F3F4F6;
-            border-radius: 6px;
             overflow: hidden;
         }
 
-        .allocation-fill {
-            height: 100%;
-            border-radius: 6px;
-            transition: width 0.5s ease;
+        .clickable-card .card-action {
+            margin-top: 1rem;
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
         }
 
-        .allocation-fill.equity {
-            background: var(--primary-blue);
+        .clickable-card:hover .card-action {
+            opacity: 1;
         }
 
-        .allocation-fill.sukuk {
-            background: var(--success-green);
+        /* Investment Simulator Styles */
+        .simulator-container, .screener-container, .session-container {
+            padding: 2rem 0;
         }
 
-        .allocation-fill.commodities {
-            background: var(--accent-gold);
-        }
-
-        .allocation-fill.cash {
-            background: var(--light-gray);
-        }
-
-        .allocation-details {
+        .simulator-header, .screener-header, .session-header {
             display: flex;
             justify-content: space-between;
-            min-width: 200px;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .simulator-balance {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--light-blue);
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+        }
+
+        .balance-label {
+            color: var(--light-gray);
+            font-weight: 600;
+        }
+
+        .balance-amount {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .simulator-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .simulator-card, .filter-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .simulator-card h3 {
+            margin: 0 0 1.5rem 0;
+            color: var(--warm-gray);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .market-list, .portfolio-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .stock-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .stock-item:hover {
+            border-color: var(--primary-blue);
+            background: var(--light-blue);
+        }
+
+        .stock-item.selected {
+            border-color: var(--primary-blue);
+            background: var(--light-blue);
+        }
+
+        .stock-info strong {
+            display: block;
+            color: var(--warm-gray);
+            font-size: 1.1rem;
+        }
+
+        .stock-info span {
+            color: var(--light-gray);
             font-size: 0.9rem;
         }
 
-        .allocation-type {
+        .halal-badge {
+            display: inline-block;
+            background: var(--success-green);
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            margin-top: 0.25rem;
+        }
+
+        .halal-badge.warning {
+            background: #F59E0B;
+        }
+
+        .stock-price {
+            text-align: right;
+        }
+
+        .price {
+            display: block;
+            font-weight: bold;
+            color: var(--warm-gray);
+        }
+
+        .change {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .change.positive {
+            color: var(--success-green);
+        }
+
+        .change.negative {
+            color: #EF4444;
+        }
+
+        .trading-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .selected-stock {
+            background: var(--light-blue);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .cost-display {
+            background: #F3F4F6;
+            padding: 0.8rem;
+            border-radius: 8px;
+            font-weight: bold;
+            color: var(--primary-blue);
+            font-size: 1.1rem;
+        }
+
+        .no-selection, .empty-portfolio {
+            text-align: center;
+            color: var(--light-gray);
+            padding: 2rem;
+        }
+
+        .no-selection i, .empty-portfolio i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        /* Halal Screener Styles */
+        .screener-filters {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .filter-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .filter-item label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+        }
+
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .results-count {
+            color: var(--light-gray);
+            font-weight: 600;
+        }
+
+        .stocks-table {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .table-header, .table-row {
+            display: grid;
+            grid-template-columns: 80px 2fr 100px 100px 120px 100px;
+            gap: 1rem;
+            padding: 1rem;
+            align-items: center;
+        }
+
+        .table-header {
+            background: #F8F9FA;
+            font-weight: bold;
+            color: var(--warm-gray);
+            border-bottom: 2px solid #E5E7EB;
+        }
+
+        .table-row {
+            border-bottom: 1px solid #F3F4F6;
+            transition: background 0.3s ease;
+        }
+
+        .table-row:hover {
+            background: var(--light-blue);
+        }
+
+        .halal-approved {
+            color: var(--success-green);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Live Session Styles */
+        .session-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .client-name {
+            font-size: 1.2rem;
             font-weight: 600;
             color: var(--warm-gray);
         }
 
-        .allocation-percentage {
-            color: var(--primary-blue);
+        .session-status.live {
+            background: #EF4444;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
             font-weight: bold;
+            animation: pulse 2s infinite;
         }
 
-        .allocation-amount {
+        .video-session {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            height: 70vh;
+        }
+
+        .video-area {
+            position: relative;
+            background: #1a1a1a;
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-video {
+            flex: 1;
+            position: relative;
+        }
+
+        .video-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .client-video {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+        }
+
+        .video-placeholder i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.7;
+        }
+
+        .video-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+            border-radius: 25px;
+        }
+
+        .control-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .control-btn:not(.end-call):not(.screen-share) {
+            background: var(--primary-blue);
+        }
+
+        .control-btn.screen-share {
+            background: var(--accent-gold);
+            width: auto;
+            padding: 0 1.5rem;
+            border-radius: 25px;
+            gap: 0.5rem;
+        }
+
+        .control-btn.end-call {
+            background: #EF4444;
+        }
+
+        .control-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .coach-video {
+            position: absolute;
+            bottom: 80px;
+            right: 20px;
+            width: 200px;
+            height: 150px;
+            background: var(--warm-gray);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .coach-video .video-placeholder {
+            background: var(--warm-gray);
+        }
+
+        .coach-video .video-placeholder h4 {
+            font-size: 0.9rem;
+            margin: 0.5rem 0 0 0;
+        }
+
+        .coach-video .video-placeholder p {
+            font-size: 0.7rem;
+            margin: 0;
+        }
+
+        .coach-video .video-placeholder i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .session-tools {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .tool-tabs {
+            display: flex;
+            background: #F8F9FA;
+            border-bottom: 2px solid #E5E7EB;
+        }
+
+        .tool-tab {
+            flex: 1;
+            padding: 1rem;
+            border: none;
+            background: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+        }
+
+        .tool-tab.active {
+            background: var(--white);
+            color: var(--primary-blue);
+            border-bottom: 3px solid var(--primary-blue);
+        }
+
+        .tool-content {
+            padding: 2rem;
+            height: calc(70vh - 80px);
+            overflow-y: auto;
+        }
+
+        .tool-panel {
+            display: none;
+        }
+
+        .tool-panel.active {
+            display: block;
+        }
+
+        .portfolio-metrics {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .metric-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem;
+            background: #F8F9FA;
+            border-radius: 8px;
+        }
+
+        .metric-label {
             color: var(--light-gray);
         }
 
-        /* Performance Insights */
-        .performance-insights {
-            margin-top: 2rem;
-        }
-
-        .performance-insights h3 {
+        .metric-value {
+            font-weight: bold;
             color: var(--warm-gray);
-            margin: 0 0 1.5rem 0;
         }
 
-        .insight-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .insight-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            display: flex;
-            gap: 1rem;
-            border-left: 4px solid #E5E7EB;
-        }
-
-        .insight-card.positive {
-            border-left-color: var(--success-green);
-        }
-
-        .insight-card.neutral {
-            border-left-color: var(--primary-blue);
-        }
-
-        .insight-card.suggestion {
-            border-left-color: var(--accent-gold);
-        }
-
-        .insight-card i {
-            font-size: 1.5rem;
-            margin-top: 0.25rem;
-        }
-
-        .insight-card.positive i {
+        .metric-value.positive {
             color: var(--success-green);
         }
 
-        .insight-card.neutral i {
-            color: var(--primary-blue);
-        }
-
-        .insight-card.suggestion i {
-            color: var(--accent-gold);
-        }
-
-        .insight-content h4 {
-            margin: 0 0 0.5rem 0;
-            color: var(--warm-gray);
-        }
-
-        .insight-content p {
+        .recommendations ul {
             margin: 0;
-            color: var(--light-gray);
-            line-height: 1.5;
-            font-size: 0.9rem;
+            padding-left: 1.5rem;
         }
 
-        /* Goals Progress */
-        .primary-goal {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            margin-bottom: 2rem;
+        .recommendations li {
+            margin-bottom: 0.5rem;
+            color: var(--light-gray);
+        }
+
+        .goal-item {
+            background: #F8F9FA;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
         }
 
         .goal-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
         }
 
-        .goal-header h3 {
-            margin: 0;
-            color: var(--primary-blue);
+        .goal-progress {
             font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-blue);
         }
 
-        .goal-target {
-            color: var(--light-gray);
-            font-weight: 600;
-        }
-
-        .goal-progress-section {
-            display: flex;
-            gap: 3rem;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .goal-circle {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: conic-gradient(var(--primary-blue) 0deg 245deg, #E5E7EB 245deg 360deg);
+        .resource-list {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
+            gap: 1rem;
         }
 
-        .goal-circle::before {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 80px;
-            background: white;
-            border-radius: 50%;
-        }
-
-        .goal-percentage {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--primary-blue);
-            z-index: 1;
-        }
-
-        .goal-label {
-            font-size: 0.8rem;
-            color: var(--light-gray);
-            z-index: 1;
-        }
-
-        .goal-details {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            flex: 1;
-        }
-
-        .goal-stat {
-            text-align: center;
-        }
-
-        .goal-stat .stat-value {
-            display: block;
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: var(--primary-blue);
-            margin-bottom: 0.25rem;
-        }
-
-        .goal-stat .stat-label {
-            color: var(--light-gray);
-            font-size: 0.9rem;
-        }
-
-        .goal-projection {
+        .resource-item {
             display: flex;
             align-items: center;
             gap: 1rem;
             padding: 1rem;
-            background: #F0FDF4;
-            border-radius: 10px;
-            border: 1px solid var(--success-green);
-        }
-
-        .projection-status {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 600;
-        }
-
-        .projection-status.on-track {
-            color: #065F46;
-        }
-
-        .projection-status i {
-            color: var(--success-green);
-        }
-
-        /* Secondary Goals */
-        .secondary-goals {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-
-        .secondary-goals h3 {
-            margin: 0 0 1.5rem 0;
-            color: var(--warm-gray);
-        }
-
-        .goal-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .goal-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1rem;
-            background: #F8FAFC;
-            border-radius: 10px;
-        }
-
-        .goal-item .goal-icon {
-            background: var(--light-blue);
-            color: var(--primary-blue);
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .goal-item .goal-info {
-            flex: 1;
-        }
-
-        .goal-item h4 {
-            margin: 0 0 0.25rem 0;
-            color: var(--warm-gray);
-        }
-
-        .goal-item p {
-            margin: 0;
-            color: var(--light-gray);
-            font-size: 0.9rem;
-        }
-
-        .goal-progress-mini {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            min-width: 120px;
-        }
-
-        .progress-bar-mini {
-            background: #E5E7EB;
-            height: 6px;
-            border-radius: 3px;
-            width: 60px;
-            overflow: hidden;
-        }
-
-        .progress-fill-mini {
-            background: var(--primary-blue);
-            height: 100%;
-            border-radius: 3px;
-            transition: width 0.5s ease;
-        }
-
-        .progress-text {
-            font-size: 0.8rem;
-            color: var(--primary-blue);
-            font-weight: 600;
-        }
-
-        /* Zakat Analysis */
-        .zakat-summary {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .zakat-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            border: 2px solid transparent;
-        }
-
-        .zakat-card.primary {
-            border-color: var(--primary-blue);
-            background: var(--light-blue);
-        }
-
-        .zakat-amount {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--primary-blue);
-            margin-bottom: 0.5rem;
-        }
-
-        .zakat-label {
-            color: var(--warm-gray);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .zakat-detail {
-            color: var(--light-gray);
-            font-size: 0.9rem;
-        }
-
-        .zakat-breakdown {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-
-        .zakat-breakdown h3 {
-            color: var(--warm-gray);
-            margin: 0 0 1.5rem 0;
-        }
-
-        .calculation-table {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .calc-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 0.75rem;
-            background: #F8FAFC;
+            background: #F8F9FA;
             border-radius: 8px;
         }
 
-        .calc-row.total {
-            background: var(--light-blue);
-            font-weight: bold;
-            border: 1px solid var(--primary-blue);
-        }
-
-        .calc-row.nisab {
-            background: #FEF3C7;
-            color: #92400E;
-        }
-
-        .calc-row.zakat-due {
-            background: #D1FAE5;
-            color: #065F46;
-            font-weight: bold;
-        }
-
-        .calc-item {
-            color: var(--warm-gray);
-        }
-
-        .calc-amount {
+        .resource-item i {
             color: var(--primary-blue);
-            font-weight: 600;
-        }
-
-        .zakat-recommendations h4 {
-            color: var(--warm-gray);
-            margin: 0 0 1rem 0;
-        }
-
-        .recommendation-list {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
-
-        .charity-rec {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1rem;
-            background: #F0FDF4;
-            border-radius: 10px;
-            border-left: 4px solid var(--success-green);
-        }
-
-        .charity-rec i {
-            color: var(--success-green);
-        }
-
-        .charity-rec span {
-            color: var(--warm-gray);
-            line-height: 1.4;
-        }
-
-        /* Learning Progress */
-        .learning-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .learning-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            text-align: center;
-        }
-
-        .learning-number {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--primary-blue);
-            margin-bottom: 0.5rem;
-        }
-
-        .learning-label {
-            color: var(--warm-gray);
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-        }
-
-        .learning-detail {
-            color: var(--light-gray);
-            font-size: 0.8rem;
-        }
-
-        /* Coaching Timeline */
-        .coaching-summary {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-
-        .coaching-summary h3 {
-            color: var(--warm-gray);
-            margin: 0 0 1.5rem 0;
-        }
-
-        .coaching-timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .timeline-item {
-            display: flex;
-            gap: 1.5rem;
-            padding: 1.5rem;
-            background: #F8FAFC;
-            border-radius: 12px;
-            border-left: 4px solid var(--primary-blue);
-        }
-
-        .timeline-date {
-            font-size: 0.9rem;
-            color: var(--light-gray);
-            font-weight: 600;
-            min-width: 100px;
-        }
-
-        .timeline-content {
-            flex: 1;
-        }
-
-        .timeline-content h4 {
-            margin: 0 0 0.5rem 0;
-            color: var(--warm-gray);
-        }
-
-        .timeline-content p {
-            margin: 0 0 1rem 0;
-            color: var(--light-gray);
-            line-height: 1.5;
-        }
-
-        .timeline-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .action-item {
-            font-size: 0.9rem;
-            padding: 0.5rem;
-            border-radius: 6px;
-        }
-
-        .action-item.completed {
-            background: #D1FAE5;
-            color: #065F46;
-        }
-
-        .action-item.pending {
-            background: #FEF3C7;
-            color: #92400E;
-        }
-
-        /* Next Session */
-        .next-session {
-            margin-top: 1.5rem;
-        }
-
-        .session-card {
-            background: var(--light-blue);
-            border: 2px solid var(--primary-blue);
-            padding: 1.5rem;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
-
-        .session-icon {
-            background: var(--primary-blue);
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             font-size: 1.2rem;
         }
 
-        .session-details {
-            flex: 1;
-        }
-
-        .session-details h4 {
-            margin: 0 0 0.25rem 0;
-            color: var(--primary-blue);
-        }
-
-        .session-details p {
-            margin: 0.25rem 0;
-            color: var(--warm-gray);
-            font-size: 0.9rem;
-        }
-
-        /* Personal Action Items */
-        .personal-recommendations {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .action-priority {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            border-left: 5px solid #E5E7EB;
-        }
-
-        .action-priority.high {
-            border-left-color: #EF4444;
-        }
-
-        .action-priority.medium {
-            border-left-color: #F59E0B;
-        }
-
-        .action-priority.low {
-            border-left-color: var(--light-gray);
-        }
-
-        .action-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-
-        .action-priority-label {
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: bold;
-        }
-
-        .action-priority.high .action-priority-label {
-            background: #FEE2E2;
-            color: #991B1B;
-        }
-
-        .action-priority.medium .action-priority-label {
-            background: #FEF3C7;
-            color: #92400E;
-        }
-
-        .action-priority.low .action-priority-label {
-            background: #F3F4F6;
-            color: var(--light-gray);
-        }
-
-        .action-header h3 {
-            margin: 0;
-            color: var(--warm-gray);
-        }
-
-        .action-priority p {
-            margin: 0 0 1rem 0;
-            color: var(--warm-gray);
-            line-height: 1.6;
-        }
-
-        .action-steps {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .step {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 0.75rem;
-            background: #F8FAFC;
+        .session-notes {
+            width: 100%;
+            min-height: 200px;
+            padding: 1rem;
+            border: 2px solid #E5E7EB;
             border-radius: 8px;
-        }
-
-        .step i {
-            color: var(--primary-blue);
-        }
-
-        .step span {
-            color: var(--warm-gray);
-        }
-
-        /* Personal Report Footer */
-        .personal-report-footer {
-            margin-top: 3rem;
-            padding: 2rem;
-            background: linear-gradient(135deg, var(--light-blue), #F0F9FF);
-            border-radius: 20px;
-            border: 2px solid var(--primary-blue);
-            text-align: center;
-        }
-
-        .footer-blessing {
-            margin-bottom: 2rem;
-        }
-
-        .footer-blessing i {
-            font-size: 1.5rem;
-            color: var(--primary-blue);
-            opacity: 0.3;
+            font-family: inherit;
+            resize: vertical;
             margin-bottom: 1rem;
         }
 
-        .footer-blessing p {
-            font-style: italic;
-            color: var(--warm-gray);
-            line-height: 1.5;
-            margin: 0 0 0.5rem 0;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
+        .session-notes:focus {
+            border-color: var(--primary-blue);
+            outline: none;
         }
 
-        .footer-blessing cite {
-            color: var(--primary-blue);
-            font-weight: 600;
-        }
-
-        .footer-actions {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        /* Personal Report Responsive */
-        @media (max-width: 768px) {
-            .personal-report-header {
-                flex-direction: column;
-                gap: 1.5rem;
-                text-align: center;
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .simulator-grid {
+                grid-template-columns: 1fr 1fr;
             }
 
-            .islamic-quote {
-                max-width: 100%;
-                text-align: center;
-            }
-
-            .personal-actions {
-                justify-content: center;
-            }
-
-            .goal-progress-section {
-                flex-direction: column;
-                gap: 1.5rem;
-                text-align: center;
-            }
-
-            .goal-details {
+            .video-session {
                 grid-template-columns: 1fr;
-            }
-
-            .portfolio-summary, .zakat-summary {
-                grid-template-columns: 1fr;
-            }
-
-            .allocation-item {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-
-            .allocation-details {
-                justify-content: space-around;
-                min-width: auto;
-            }
-
-            .timeline-item {
-                flex-direction: column;
                 gap: 1rem;
-                text-align: center;
             }
 
-            .session-card {
-                flex-direction: column;
-                text-align: center;
+            .session-tools {
+                height: auto;
             }
 
-            .action-header {
-                flex-direction: column;
+            .tool-content {
+                height: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .simulator-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .screener-filters {
+                grid-template-columns: 1fr;
+            }
+
+            .table-header, .table-row {
+                grid-template-columns: 1fr;
                 gap: 0.5rem;
-                text-align: center;
+                text-align: left;
+            }
+
+            .table-header div::before,
+            .table-row div::before {
+                content: attr(data-label) ': ';
+                font-weight: bold;
+                color: var(--primary-blue);
+            }
+
+            .tool-tabs {
+                flex-wrap: wrap;
+            }
+
+            .tool-tab {
+                flex: 1 1 50%;
+            }
+
+            .coach-video {
+                position: relative;
+                bottom: auto;
+                right: auto;
+                width: 100%;
+                height: 200px;
+                margin-top: 1rem;
             }
         }
 
@@ -3145,6 +2065,407 @@
             </div>
         </div>
 
+        <!-- Investment Simulator Screen -->
+        <div id="investment-simulator" class="screen">
+            <div class="container">
+                <div class="simulator-container">
+                    <div class="simulator-header">
+                        <button class="btn btn-secondary" onclick="showDashboard()" aria-label="Back to dashboard">
+                            <i class="fas fa-arrow-left"></i> Back to Dashboard
+                        </button>
+                        <h2>Investment Simulator</h2>
+                        <div class="simulator-balance">
+                            <span class="balance-label">Virtual Balance:</span>
+                            <span class="balance-amount">£<span id="virtualBalance">50000</span></span>
+                        </div>
+                    </div>
+
+                    <div class="simulator-grid">
+                        <!-- Stock Market Section -->
+                        <div class="simulator-card">
+                            <h3><i class="fas fa-chart-candlestick"></i> Market Overview</h3>
+                            <div class="market-list">
+                                <div class="stock-item" onclick="selectStock('AAPL', 'Apple Inc.', 175.50, 2.1)">
+                                    <div class="stock-info">
+                                        <strong>AAPL</strong>
+                                        <span>Apple Inc.</span>
+                                        <small class="halal-badge">✓ Halal Approved</small>
+                                    </div>
+                                    <div class="stock-price">
+                                        <span class="price">$175.50</span>
+                                        <span class="change positive">+2.1%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="stock-item" onclick="selectStock('MSFT', 'Microsoft Corp.', 332.89, 1.8)">
+                                    <div class="stock-info">
+                                        <strong>MSFT</strong>
+                                        <span>Microsoft Corp.</span>
+                                        <small class="halal-badge">✓ Halal Approved</small>
+                                    </div>
+                                    <div class="stock-price">
+                                        <span class="price">$332.89</span>
+                                        <span class="change positive">+1.8%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="stock-item" onclick="selectStock('GOOGL', 'Alphabet Inc.', 142.75, -0.5)">
+                                    <div class="stock-info">
+                                        <strong>GOOGL</strong>
+                                        <span>Alphabet Inc.</span>
+                                        <small class="halal-badge warning">⚠ Review Required</small>
+                                    </div>
+                                    <div class="stock-price">
+                                        <span class="price">$142.75</span>
+                                        <span class="change negative">-0.5%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="stock-item" onclick="selectStock('TSLA', 'Tesla Inc.', 248.42, 3.2)">
+                                    <div class="stock-info">
+                                        <strong>TSLA</strong>
+                                        <span>Tesla Inc.</span>
+                                        <small class="halal-badge">✓ Halal Approved</small>
+                                    </div>
+                                    <div class="stock-price">
+                                        <span class="price">$248.42</span>
+                                        <span class="change positive">+3.2%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Trading Panel -->
+                        <div class="simulator-card">
+                            <h3><i class="fas fa-exchange-alt"></i> Place Order</h3>
+                            <div class="trading-form" id="tradingForm" style="display: none;">
+                                <div class="selected-stock" id="selectedStock">
+                                    <!-- Selected stock info will appear here -->
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Order Type</label>
+                                    <select class="form-control" id="orderType">
+                                        <option value="buy">Buy</option>
+                                        <option value="sell">Sell</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Quantity</label>
+                                    <input type="number" class="form-control" id="quantity" min="1" value="1">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Total Cost</label>
+                                    <div class="cost-display" id="totalCost">$0.00</div>
+                                </div>
+                                
+                                <button class="btn btn-primary" onclick="executeTrade()" id="executeBtn">
+                                    Execute Trade
+                                </button>
+                            </div>
+                            
+                            <div class="no-selection" id="noSelection">
+                                <i class="fas fa-mouse-pointer"></i>
+                                <p>Select a stock from the market to start trading</p>
+                            </div>
+                        </div>
+
+                        <!-- Portfolio -->
+                        <div class="simulator-card">
+                            <h3><i class="fas fa-briefcase"></i> My Portfolio</h3>
+                            <div class="portfolio-list" id="portfolioList">
+                                <div class="empty-portfolio">
+                                    <i class="fas fa-chart-pie"></i>
+                                    <p>Your portfolio is empty. Start by buying some halal investments!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Halal Stock Screener -->
+        <div id="halal-screener" class="screen">
+            <div class="container">
+                <div class="screener-container">
+                    <div class="screener-header">
+                        <button class="btn btn-secondary" onclick="showDashboard()" aria-label="Back to dashboard">
+                            <i class="fas fa-arrow-left"></i> Back to Dashboard
+                        </button>
+                        <h2>Halal Stock Screener</h2>
+                        <p>Find Shariah-compliant investments based on strict Islamic finance criteria</p>
+                    </div>
+
+                    <div class="screener-filters">
+                        <div class="filter-card">
+                            <h4>Screening Criteria</h4>
+                            <div class="filter-grid">
+                                <div class="filter-item">
+                                    <label>
+                                        <input type="checkbox" checked onchange="applyFilters()"> 
+                                        No Interest-Based Revenue
+                                    </label>
+                                </div>
+                                <div class="filter-item">
+                                    <label>
+                                        <input type="checkbox" checked onchange="applyFilters()"> 
+                                        No Gambling/Gaming
+                                    </label>
+                                </div>
+                                <div class="filter-item">
+                                    <label>
+                                        <input type="checkbox" checked onchange="applyFilters()"> 
+                                        No Alcohol/Tobacco
+                                    </label>
+                                </div>
+                                <div class="filter-item">
+                                    <label>
+                                        <input type="checkbox" checked onchange="applyFilters()"> 
+                                        Debt Ratio < 33%
+                                    </label>
+                                </div>
+                                <div class="filter-item">
+                                    <label>
+                                        <input type="checkbox" onchange="applyFilters()"> 
+                                        Strict Mode (Extra Screening)
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-card">
+                            <h4>Investment Preferences</h4>
+                            <div class="filter-grid">
+                                <div class="filter-item">
+                                    <label>Market Cap</label>
+                                    <select class="form-control" onchange="applyFilters()">
+                                        <option value="">All</option>
+                                        <option value="large">Large Cap (>$10B)</option>
+                                        <option value="mid">Mid Cap ($2B-$10B)</option>
+                                        <option value="small">Small Cap (<$2B)</option>
+                                    </select>
+                                </div>
+                                <div class="filter-item">
+                                    <label>Sector</label>
+                                    <select class="form-control" onchange="applyFilters()">
+                                        <option value="">All Sectors</option>
+                                        <option value="tech">Technology</option>
+                                        <option value="healthcare">Healthcare</option>
+                                        <option value="consumer">Consumer Goods</option>
+                                        <option value="industrial">Industrial</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="screener-results">
+                        <div class="results-header">
+                            <h3>Screening Results</h3>
+                            <span class="results-count" id="resultsCount">2,847 stocks found</span>
+                        </div>
+                        
+                        <div class="stocks-table">
+                            <div class="table-header">
+                                <div class="col-symbol">Symbol</div>
+                                <div class="col-name">Company</div>
+                                <div class="col-price">Price</div>
+                                <div class="col-change">Change</div>
+                                <div class="col-halal">Halal Status</div>
+                                <div class="col-action">Action</div>
+                            </div>
+                            
+                            <div class="table-row">
+                                <div class="col-symbol"><strong>AAPL</strong></div>
+                                <div class="col-name">Apple Inc.</div>
+                                <div class="col-price">$175.50</div>
+                                <div class="col-change positive">+2.1%</div>
+                                <div class="col-halal"><span class="halal-approved">✓ Approved</span></div>
+                                <div class="col-action"><button class="btn-small btn-primary">Analyze</button></div>
+                            </div>
+                            
+                            <div class="table-row">
+                                <div class="col-symbol"><strong>MSFT</strong></div>
+                                <div class="col-name">Microsoft Corporation</div>
+                                <div class="col-price">$332.89</div>
+                                <div class="col-change positive">+1.8%</div>
+                                <div class="col-halal"><span class="halal-approved">✓ Approved</span></div>
+                                <div class="col-action"><button class="btn-small btn-primary">Analyze</button></div>
+                            </div>
+                            
+                            <div class="table-row">
+                                <div class="col-symbol"><strong>TSLA</strong></div>
+                                <div class="col-name">Tesla Inc.</div>
+                                <div class="col-price">$248.42</div>
+                                <div class="col-change positive">+3.2%</div>
+                                <div class="col-halal"><span class="halal-approved">✓ Approved</span></div>
+                                <div class="col-action"><button class="btn-small btn-primary">Analyze</button></div>
+                            </div>
+                            
+                            <div class="table-row">
+                                <div class="col-symbol"><strong>JNJ</strong></div>
+                                <div class="col-name">Johnson & Johnson</div>
+                                <div class="col-price">$162.34</div>
+                                <div class="col-change negative">-0.3%</div>
+                                <div class="col-halal"><span class="halal-approved">✓ Approved</span></div>
+                                <div class="col-action"><button class="btn-small btn-primary">Analyze</button></div>
+                            </div>
+                            
+                            <div class="table-row">
+                                <div class="col-symbol"><strong>V</strong></div>
+                                <div class="col-name">Visa Inc.</div>
+                                <div class="col-price">$234.67</div>
+                                <div class="col-change positive">+1.1%</div>
+                                <div class="col-halal"><span class="halal-approved">✓ Approved</span></div>
+                                <div class="col-action"><button class="btn-small btn-primary">Analyze</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live Coaching Session -->
+        <div id="live-session" class="screen">
+            <div class="container">
+                <div class="session-container">
+                    <div class="session-header">
+                        <button class="btn btn-secondary" onclick="showScreen('coach-dashboard')" aria-label="Back to coach dashboard">
+                            <i class="fas fa-arrow-left"></i> Back to Coach Dashboard
+                        </button>
+                        <h2>Live Coaching Session</h2>
+                        <div class="session-info">
+                            <span class="client-name" id="sessionClientName">Ahmad Al-Rashid</span>
+                            <span class="session-status live">● LIVE</span>
+                        </div>
+                    </div>
+
+                    <div class="video-session">
+                        <div class="video-area">
+                            <div class="main-video">
+                                <div class="video-placeholder client-video">
+                                    <i class="fas fa-user-circle"></i>
+                                    <h3 id="clientVideoName">Ahmad Al-Rashid</h3>
+                                    <p>Client Video Feed</p>
+                                </div>
+                                <div class="video-controls">
+                                    <button class="control-btn" onclick="toggleMute()" id="muteBtn">
+                                        <i class="fas fa-microphone"></i>
+                                    </button>
+                                    <button class="control-btn" onclick="toggleVideo()" id="videoBtn">
+                                        <i class="fas fa-video"></i>
+                                    </button>
+                                    <button class="control-btn screen-share" onclick="toggleScreenShare()" id="shareBtn">
+                                        <i class="fas fa-desktop"></i> Share Screen
+                                    </button>
+                                    <button class="control-btn end-call" onclick="endSession()">
+                                        <i class="fas fa-phone-slash"></i> End Call
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="coach-video">
+                                <div class="video-placeholder">
+                                    <i class="fas fa-user-circle"></i>
+                                    <h4>Amina Hassan (You)</h4>
+                                    <p>Coach Video</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="session-tools">
+                            <div class="tool-tabs">
+                                <button class="tool-tab active" onclick="showTool('portfolio')" id="portfolioTab">
+                                    <i class="fas fa-chart-pie"></i> Portfolio Review
+                                </button>
+                                <button class="tool-tab" onclick="showTool('goals')" id="goalsTab">
+                                    <i class="fas fa-target"></i> Goals
+                                </button>
+                                <button class="tool-tab" onclick="showTool('education')" id="educationTab">
+                                    <i class="fas fa-graduation-cap"></i> Education
+                                </button>
+                                <button class="tool-tab" onclick="showTool('notes')" id="notesTab">
+                                    <i class="fas fa-sticky-note"></i> Notes
+                                </button>
+                            </div>
+
+                            <div class="tool-content">
+                                <div class="tool-panel active" id="portfolioPanel">
+                                    <h4>Client Portfolio Analysis</h4>
+                                    <div class="portfolio-metrics">
+                                        <div class="metric-item">
+                                            <span class="metric-label">Total Value:</span>
+                                            <span class="metric-value">£12,847</span>
+                                        </div>
+                                        <div class="metric-item">
+                                            <span class="metric-label">Monthly Growth:</span>
+                                            <span class="metric-value positive">+7.2%</span>
+                                        </div>
+                                        <div class="metric-item">
+                                            <span class="metric-label">Risk Level:</span>
+                                            <span class="metric-value">Moderate</span>
+                                        </div>
+                                    </div>
+                                    <div class="recommendations">
+                                        <h5>Recommendations:</h5>
+                                        <ul>
+                                            <li>Consider increasing monthly contribution by £200</li>
+                                            <li>Rebalance towards more growth-oriented halal ETFs</li>
+                                            <li>Review Zakat obligations for next year</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="tool-panel" id="goalsPanel">
+                                    <h4>Goal Progress Tracking</h4>
+                                    <div class="goal-item">
+                                        <div class="goal-header">
+                                            <h5>House Deposit Goal</h5>
+                                            <span class="goal-progress">68%</span>
+                                        </div>
+                                        <div class="progress-bar-small">
+                                            <div class="progress-fill-small" style="width: 68%"></div>
+                                        </div>
+                                        <p>Target: £45,000 by Dec 2025</p>
+                                    </div>
+                                </div>
+
+                                <div class="tool-panel" id="educationPanel">
+                                    <h4>Educational Resources</h4>
+                                    <div class="resource-list">
+                                        <div class="resource-item">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Halal Investment Basics</span>
+                                            <button class="btn-small btn-primary">Share</button>
+                                        </div>
+                                        <div class="resource-item">
+                                            <i class="fas fa-file-pdf"></i>
+                                            <span>Zakat Calculation Guide</span>
+                                            <button class="btn-small btn-primary">Share</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tool-panel" id="notesPanel">
+                                    <h4>Session Notes</h4>
+                                    <textarea class="session-notes" placeholder="Add notes about this session...">
+Client seems confident about current strategy. Discussed:
+- Increasing monthly savings from £500 to £700
+- Adding international halal ETF exposure
+- Planning for Zakat payment in Q2
+                                    </textarea>
+                                    <button class="btn btn-primary">Save Notes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Welcome Screen -->
         <div id="welcome" class="screen islamic-pattern">
             <div class="container">
@@ -3538,26 +2859,42 @@
                             <div class="metric-label">Estimated annual Zakat</div>
                         </div>
                         
-                        <div class="dashboard-card">
+                        <div class="dashboard-card clickable-card" onclick="showInvestmentSimulator()">
                             <div class="card-header">
                                 <div class="card-icon">
-                                    <i class="fas fa-chalkboard-teacher"></i>
+                                    <i class="fas fa-chart-line"></i>
                                 </div>
-                                <div class="card-title">Next Session</div>
+                                <div class="card-title">
+                                    Investment Simulator
+                                    <button class="help-btn" onclick="event.stopPropagation(); showTooltip(this, 'Practice halal investing with virtual money - no risk, real learning')" aria-label="More information about investment simulator">
+                                        <i class="fas fa-question-circle" aria-hidden="true"></i>
+                                    </button>
+                                </div>
                             </div>
-                            <div class="metric">3 days</div>
-                            <div class="metric-label">Coaching call with Amina</div>
+                            <div class="metric">£50,000</div>
+                            <div class="metric-label">Virtual portfolio balance</div>
+                            <div class="card-action">
+                                <i class="fas fa-play-circle"></i> Start Trading Session
+                            </div>
                         </div>
-                        
-                        <div class="dashboard-card">
+
+                        <div class="dashboard-card clickable-card" onclick="showHalalScreener()">
                             <div class="card-header">
                                 <div class="card-icon">
-                                    <i class="fas fa-graduation-cap"></i>
+                                    <i class="fas fa-filter"></i>
                                 </div>
-                                <div class="card-title">Learning Progress</div>
+                                <div class="card-title">
+                                    Halal Stock Screener
+                                    <button class="help-btn" onclick="event.stopPropagation(); showTooltip(this, 'Find Shariah-compliant investments with our advanced screening tool')" aria-label="More information about halal screener">
+                                        <i class="fas fa-question-circle" aria-hidden="true"></i>
+                                    </button>
+                                </div>
                             </div>
-                            <div class="metric">85%</div>
-                            <div class="metric-label">Halal investing course</div>
+                            <div class="metric">2,847</div>
+                            <div class="metric-label">Halal stocks available</div>
+                            <div class="card-action">
+                                <i class="fas fa-search"></i> Browse Investments
+                            </div>
                         </div>
                     </div>
                     
@@ -3565,391 +2902,6 @@
                         <button class="btn btn-primary" onclick="showScreen('welcome')">
                             <i class="fas fa-home"></i> Back to Demo Selection
                         </button>
-                        <button class="btn btn-secondary" onclick="showScreen('corporate-report')" style="margin-left: 1rem;">
-                            <i class="fas fa-file-alt"></i> View Full Report
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Corporate Full Report Screen -->
-        <div id="corporate-report" class="screen">
-            <div class="container">
-                <div class="report-container">
-                    <!-- Report Header -->
-                    <div class="report-header">
-                        <div class="report-title-section">
-                            <h1>Employee Financial Wellness Report</h1>
-                            <div class="report-subtitle">
-                                <span>TechCorp Ltd</span>
-                                <span class="report-period">Q4 2024 - Full Year Summary</span>
-                            </div>
-                        </div>
-                        <div class="report-actions">
-                            <button class="btn btn-secondary" onclick="exportReport('pdf')">
-                                <i class="fas fa-file-pdf" aria-hidden="true"></i> Export PDF
-                            </button>
-                            <button class="btn btn-secondary" onclick="exportReport('excel')">
-                                <i class="fas fa-file-excel" aria-hidden="true"></i> Export Excel
-                            </button>
-                            <button class="btn btn-primary" onclick="shareReport()">
-                                <i class="fas fa-share" aria-hidden="true"></i> Share Report
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Executive Summary -->
-                    <div class="report-section">
-                        <h2><i class="fas fa-chart-line" aria-hidden="true"></i> Executive Summary</h2>
-                        <div class="executive-summary">
-                            <div class="summary-grid">
-                                <div class="summary-card highlight">
-                                    <div class="summary-number">247</div>
-                                    <div class="summary-label">Total Employees Enrolled</div>
-                                    <div class="summary-change positive">+18% vs Q3</div>
-                                </div>
-                                <div class="summary-card">
-                                    <div class="summary-number">78%</div>
-                                    <div class="summary-label">Average Completion Rate</div>
-                                    <div class="summary-change positive">+12% vs Q3</div>
-                                </div>
-                                <div class="summary-card">
-                                    <div class="summary-number">4.7/5</div>
-                                    <div class="summary-label">Employee Satisfaction</div>
-                                    <div class="summary-change positive">+0.3 vs Q3</div>
-                                </div>
-                                <div class="summary-card">
-                                    <div class="summary-number">89%</div>
-                                    <div class="summary-label">Retention Rate</div>
-                                    <div class="summary-change positive">+7% vs industry</div>
-                                </div>
-                            </div>
-                            
-                            <div class="key-insights">
-                                <h3>Key Insights & Achievements</h3>
-                                <ul>
-                                    <li><strong>High Engagement:</strong> 89% of enrolled employees completed at least one module in Q4</li>
-                                    <li><strong>Retention Impact:</strong> Employees in the program showed 23% higher retention rates</li>
-                                    <li><strong>Diversity Success:</strong> 94% of Muslim employees report feeling more valued and included</li>
-                                    <li><strong>Knowledge Growth:</strong> Post-program assessments show 67% improvement in financial literacy</li>
-                                    <li><strong>Behavioral Change:</strong> 73% of participants increased their savings rate by average of 2.4%</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Department Performance -->
-                    <div class="report-section">
-                        <h2><i class="fas fa-building" aria-hidden="true"></i> Department Performance Analysis</h2>
-                        <div class="department-analysis">
-                            <div class="performance-chart">
-                                <h3>Completion Rates by Department</h3>
-                                <div class="chart-container">
-                                    <canvas id="departmentChart" width="400" height="200"></canvas>
-                                </div>
-                            </div>
-                            
-                            <div class="department-details">
-                                <div class="dept-card">
-                                    <div class="dept-header">
-                                        <h4>Engineering Department</h4>
-                                        <span class="dept-score excellent">A+</span>
-                                    </div>
-                                    <div class="dept-stats">
-                                        <div class="stat">
-                                            <span class="stat-label">Completion Rate</span>
-                                            <span class="stat-value">96%</span>
-                                        </div>
-                                        <div class="stat">
-                                            <span class="stat-label">Satisfaction</span>
-                                            <span class="stat-value">4.8/5</span>
-                                        </div>
-                                        <div class="stat">
-                                            <span class="stat-label">Coaching Uptake</span>
-                                            <span class="stat-value">40%</span>
-                                        </div>
-                                    </div>
-                                    <div class="dept-insights">
-                                        <p><strong>Top Performer:</strong> Highest engagement across all metrics. Strong peer learning culture.</p>
-                                    </div>
-                                </div>
-
-                                <div class="dept-card">
-                                    <div class="dept-header">
-                                        <h4>Marketing Department</h4>
-                                        <span class="dept-score good">A</span>
-                                    </div>
-                                    <div class="dept-stats">
-                                        <div class="stat">
-                                            <span class="stat-label">Completion Rate</span>
-                                            <span class="stat-value">91%</span>
-                                        </div>
-                                        <div class="stat">
-                                            <span class="stat-label">Satisfaction</span>
-                                            <span class="stat-value">4.6/5</span>
-                                        </div>
-                                        <div class="stat">
-                                            <span class="stat-label">Coaching Uptake</span>
-                                            <span class="stat-value">43%</span>
-                                        </div>
-                                    </div>
-                                    <div class="dept-insights">
-                                        <p><strong>High Collaboration:</strong> Excellent team learning sessions. Creative approach to financial planning.</p>
-                                    </div>
-                                </div>
-
-                                <div class="dept-card">
-                                    <div class="dept-header">
-                                        <h4>HR & Operations</h4>
-                                        <span class="dept-score needs-improvement">B</span>
-                                    </div>
-                                    <div class="dept-stats">
-                                        <div class="stat">
-                                            <span class="stat-label">Completion Rate</span>
-                                            <span class="stat-value">74%</span>
-                                        </div>
-                                        <div class="stat">
-                                            <span class="stat-label">Satisfaction</span>
-                                            <span class="stat-value">4.4/5</span>
-                                        </div>
-                                        <div class="stat">
-                                            <span class="stat-label">Coaching Uptake</span>
-                                            <span class="stat-value">30%</span>
-                                        </div>
-                                    </div>
-                                    <div class="dept-insights">
-                                        <p><strong>Opportunity Area:</strong> Time constraints due to operational demands. Recommend flexible scheduling.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Learning Progress -->
-                    <div class="report-section">
-                        <h2><i class="fas fa-graduation-cap" aria-hidden="true"></i> Learning & Development Progress</h2>
-                        <div class="learning-analysis">
-                            <div class="learning-overview">
-                                <div class="learning-stat">
-                                    <div class="learning-number">1,847</div>
-                                    <div class="learning-label">Total Learning Hours</div>
-                                    <div class="learning-detail">Average 7.5 hours per employee</div>
-                                </div>
-                                <div class="learning-stat">
-                                    <div class="learning-number">15</div>
-                                    <div class="learning-label">Active Learning Modules</div>
-                                    <div class="learning-detail">3 new modules this quarter</div>
-                                </div>
-                                <div class="learning-stat">
-                                    <div class="learning-number">89%</div>
-                                    <div class="learning-label">Knowledge Retention</div>
-                                    <div class="learning-detail">Measured via assessments</div>
-                                </div>
-                            </div>
-
-                            <div class="module-performance">
-                                <h3>Module Performance Rankings</h3>
-                                <div class="module-list">
-                                    <div class="module-item top-performer">
-                                        <div class="module-rank">1</div>
-                                        <div class="module-info">
-                                            <h4>Introduction to Halal Investing</h4>
-                                            <p>Foundation course covering Islamic finance principles</p>
-                                        </div>
-                                        <div class="module-metrics">
-                                            <span class="completion-rate">96% completion</span>
-                                            <span class="rating">4.9/5 rating</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="module-item">
-                                        <div class="module-rank">2</div>
-                                        <div class="module-info">
-                                            <h4>Zakat Calculation & Planning</h4>
-                                            <p>Advanced module on charitable giving optimization</p>
-                                        </div>
-                                        <div class="module-metrics">
-                                            <span class="completion-rate">87% completion</span>
-                                            <span class="rating">4.7/5 rating</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="module-item">
-                                        <div class="module-rank">3</div>
-                                        <div class="module-info">
-                                            <h4>Retirement Planning (Islamic)</h4>
-                                            <p>Long-term wealth building strategies</p>
-                                        </div>
-                                        <div class="module-metrics">
-                                            <span class="completion-rate">82% completion</span>
-                                            <span class="rating">4.6/5 rating</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- DEI Impact -->
-                    <div class="report-section">
-                        <h2><i class="fas fa-users" aria-hidden="true"></i> Diversity, Equity & Inclusion Impact</h2>
-                        <div class="dei-analysis">
-                            <div class="dei-metrics">
-                                <div class="dei-card">
-                                    <h3>Religious Inclusion</h3>
-                                    <div class="dei-stat">
-                                        <span class="big-number">94%</span>
-                                        <span class="dei-label">of Muslim employees feel more valued</span>
-                                    </div>
-                                    <div class="dei-detail">Compared to 67% industry average</div>
-                                </div>
-
-                                <div class="dei-card">
-                                    <h3>Cross-Cultural Learning</h3>
-                                    <div class="dei-stat">
-                                        <span class="big-number">78%</span>
-                                        <span class="dei-label">of non-Muslim employees gained Islamic finance awareness</span>
-                                    </div>
-                                    <div class="dei-detail">Promoting cultural understanding</div>
-                                </div>
-
-                                <div class="dei-card">
-                                    <h3>Retention Improvement</h3>
-                                    <div class="dei-stat">
-                                        <span class="big-number">23%</span>
-                                        <span class="dei-label">higher retention in program participants</span>
-                                    </div>
-                                    <div class="dei-detail">Particularly strong among diverse talent</div>
-                                </div>
-                            </div>
-
-                            <div class="dei-testimonials">
-                                <h3>Employee Feedback</h3>
-                                <div class="testimonial-grid">
-                                    <blockquote class="testimonial">
-                                        <p>"Finally, a company that understands my values. The Islamic finance education shows real commitment to inclusion."</p>
-                                        <cite>- Senior Software Engineer</cite>
-                                    </blockquote>
-                                    <blockquote class="testimonial">
-                                        <p>"I learned so much about ethical investing. It's made me a better financial planner for all our employees."</p>
-                                        <cite>- HR Business Partner</cite>
-                                    </blockquote>
-                                    <blockquote class="testimonial">
-                                        <p>"The coaching helped me align my investments with my faith. I'm more confident about my financial future."</p>
-                                        <cite>- Marketing Manager</cite>
-                                    </blockquote>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ROI Analysis -->
-                    <div class="report-section">
-                        <h2><i class="fas fa-pound-sign" aria-hidden="true"></i> Return on Investment Analysis</h2>
-                        <div class="roi-analysis">
-                            <div class="roi-summary">
-                                <div class="roi-card primary">
-                                    <h3>Program Investment</h3>
-                                    <div class="roi-amount">£47,500</div>
-                                    <div class="roi-detail">Annual program cost</div>
-                                </div>
-                                <div class="roi-card success">
-                                    <h3>Calculated Savings</h3>
-                                    <div class="roi-amount">£142,800</div>
-                                    <div class="roi-detail">From reduced turnover & increased productivity</div>
-                                </div>
-                                <div class="roi-card highlight">
-                                    <h3>Net ROI</h3>
-                                    <div class="roi-amount">201%</div>
-                                    <div class="roi-detail">3:1 return on investment</div>
-                                </div>
-                            </div>
-
-                            <div class="roi-breakdown">
-                                <h3>ROI Breakdown</h3>
-                                <div class="roi-items">
-                                    <div class="roi-item">
-                                        <span class="roi-category">Reduced Turnover</span>
-                                        <span class="roi-saving">£89,200</span>
-                                        <span class="roi-note">23% retention improvement × avg replacement cost</span>
-                                    </div>
-                                    <div class="roi-item">
-                                        <span class="roi-category">Increased Productivity</span>
-                                        <span class="roi-saving">£34,600</span>
-                                        <span class="roi-note">Employee engagement correlation studies</span>
-                                    </div>
-                                    <div class="roi-item">
-                                        <span class="roi-category">Reduced Recruitment</span>
-                                        <span class="roi-saving">£19,000</span>
-                                        <span class="roi-note">Lower hiring needs due to retention</span>
-                                    </div>
-                                    <div class="roi-item total">
-                                        <span class="roi-category">Total Benefit</span>
-                                        <span class="roi-saving">£142,800</span>
-                                        <span class="roi-note">Annualized savings</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Recommendations -->
-                    <div class="report-section">
-                        <h2><i class="fas fa-lightbulb" aria-hidden="true"></i> Strategic Recommendations</h2>
-                        <div class="recommendations">
-                            <div class="recommendation priority-high">
-                                <div class="rec-header">
-                                    <span class="rec-priority">HIGH PRIORITY</span>
-                                    <h3>Expand to All Departments</h3>
-                                </div>
-                                <p>Roll out program to remaining 150 employees in Sales and Customer Success teams. Expected completion by Q2 2025.</p>
-                                <div class="rec-impact">
-                                    <span>Expected Impact: +£67K annual savings</span>
-                                </div>
-                            </div>
-
-                            <div class="recommendation priority-medium">
-                                <div class="rec-header">
-                                    <span class="rec-priority">MEDIUM PRIORITY</span>
-                                    <h3>Advanced Coaching Program</h3>
-                                </div>
-                                <p>Introduce 1:1 coaching for senior leadership and high-performers. Focus on advanced investment strategies and wealth building.</p>
-                                <div class="rec-impact">
-                                    <span>Expected Impact: Enhanced leadership retention</span>
-                                </div>
-                            </div>
-
-                            <div class="recommendation priority-low">
-                                <div class="rec-header">
-                                    <span class="rec-priority">FUTURE CONSIDERATION</span>
-                                    <h3>Family Financial Planning</h3>
-                                </div>
-                                <p>Extend program benefits to employee families. Include spouse financial literacy and children's education planning modules.</p>
-                                <div class="rec-impact">
-                                    <span>Expected Impact: Deeper employee loyalty</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Report Footer -->
-                    <div class="report-footer">
-                        <div class="footer-content">
-                            <div class="report-meta">
-                                <p><strong>Report Generated:</strong> January 15, 2025</p>
-                                <p><strong>Data Period:</strong> January 1, 2024 - December 31, 2024</p>
-                                <p><strong>Next Review:</strong> April 15, 2025</p>
-                            </div>
-                            <div class="footer-actions">
-                                <button class="btn btn-secondary" onclick="showScreen('corporate-dashboard')">
-                                    <i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Dashboard
-                                </button>
-                                <button class="btn btn-primary" onclick="scheduleReview()">
-                                    <i class="fas fa-calendar-plus" aria-hidden="true"></i> Schedule Review Meeting
-                                </button>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -4122,7 +3074,7 @@
                                 </div>
                                 <div class="session-actions">
                                     <button class="btn-small btn-secondary">Reschedule</button>
-                                    <button class="btn-small btn-primary">Join Call</button>
+                                    <button class="btn-small btn-primary" onclick="startLiveSession('Ahmad Al-Rashid')">Join Call</button>
                                 </div>
                             </div>
 
@@ -4147,499 +3099,6 @@
                         <button class="btn btn-primary" onclick="showScreen('welcome')">
                             <i class="fas fa-home"></i> Back to Demo Selection
                         </button>
-                        <button class="btn btn-secondary" onclick="showScreen('individual-report')" style="margin-left: 1rem;">
-                            <i class="fas fa-chart-line"></i> View My Financial Report
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Individual Financial Report Screen -->
-        <div id="individual-report" class="screen">
-            <div class="container">
-                <div class="report-container">
-                    <!-- Personal Report Header -->
-                    <div class="personal-report-header">
-                        <div class="personal-title-section">
-                            <div class="greeting-section">
-                                <h1>Your Financial Journey Report</h1>
-                                <div class="personal-greeting">
-                                    <span class="greeting-text">Assalamu Alaikum, <span id="reportUserName">Ahmad</span></span>
-                                    <span class="report-period">December 2024 Summary</span>
-                                </div>
-                            </div>
-                            <div class="islamic-quote">
-                                <i class="fas fa-quote-left" aria-hidden="true"></i>
-                                <p>"And it is He who gives life and causes death, and His is the alternation of night and day. Then will you not reason?"</p>
-                                <cite>Qur'an 23:80</cite>
-                            </div>
-                        </div>
-                        <div class="personal-actions">
-                            <button class="btn btn-secondary" onclick="exportPersonalReport('pdf')">
-                                <i class="fas fa-download" aria-hidden="true"></i> Download PDF
-                            </button>
-                            <button class="btn btn-secondary" onclick="shareWithCoach()">
-                                <i class="fas fa-share-alt" aria-hidden="true"></i> Share with Coach
-                            </button>
-                            <button class="btn btn-primary" onclick="scheduleCoaching()">
-                                <i class="fas fa-calendar-plus" aria-hidden="true"></i> Book Coaching
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Portfolio Performance Overview -->
-                    <div class="report-section">
-                        <h2><i class="fas fa-chart-line" aria-hidden="true"></i> Portfolio Performance</h2>
-                        <div class="portfolio-overview">
-                            <div class="portfolio-summary">
-                                <div class="portfolio-card primary">
-                                    <div class="portfolio-icon">
-                                        <i class="fas fa-wallet" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="portfolio-content">
-                                        <div class="portfolio-value">£12,847</div>
-                                        <div class="portfolio-label">Total Portfolio Value</div>
-                                        <div class="portfolio-change positive">+£1,234 (+10.6%) this month</div>
-                                    </div>
-                                </div>
-
-                                <div class="portfolio-card">
-                                    <div class="portfolio-icon">
-                                        <i class="fas fa-trending-up" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="portfolio-content">
-                                        <div class="portfolio-value">+7.2%</div>
-                                        <div class="portfolio-label">Monthly Return</div>
-                                        <div class="portfolio-benchmark">vs +4.1% FTSE Shariah</div>
-                                    </div>
-                                </div>
-
-                                <div class="portfolio-card">
-                                    <div class="portfolio-icon">
-                                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="portfolio-content">
-                                        <div class="portfolio-value">100%</div>
-                                        <div class="portfolio-label">Shariah Compliant</div>
-                                        <div class="portfolio-benchmark">All investments screened</div>
-                                    </div>
-                                </div>
-
-                                <div class="portfolio-card">
-                                    <div class="portfolio-icon">
-                                        <i class="fas fa-chart-pie" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="portfolio-content">
-                                        <div class="portfolio-value">Moderate</div>
-                                        <div class="portfolio-label">Risk Level</div>
-                                        <div class="portfolio-benchmark">Balanced allocation</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="allocation-breakdown">
-                                <h3>Asset Allocation</h3>
-                                <div class="allocation-chart">
-                                    <div class="allocation-item">
-                                        <div class="allocation-bar">
-                                            <div class="allocation-fill equity" style="width: 60%"></div>
-                                        </div>
-                                        <div class="allocation-details">
-                                            <span class="allocation-type">Halal Equities</span>
-                                            <span class="allocation-percentage">60%</span>
-                                            <span class="allocation-amount">£7,708</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="allocation-item">
-                                        <div class="allocation-bar">
-                                            <div class="allocation-fill sukuk" style="width: 25%"></div>
-                                        </div>
-                                        <div class="allocation-details">
-                                            <span class="allocation-type">Sukuk Bonds</span>
-                                            <span class="allocation-percentage">25%</span>
-                                            <span class="allocation-amount">£3,212</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="allocation-item">
-                                        <div class="allocation-bar">
-                                            <div class="allocation-fill commodities" style="width: 10%"></div>
-                                        </div>
-                                        <div class="allocation-details">
-                                            <span class="allocation-type">Gold & Commodities</span>
-                                            <span class="allocation-percentage">10%</span>
-                                            <span class="allocation-amount">£1,285</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="allocation-item">
-                                        <div class="allocation-bar">
-                                            <div class="allocation-fill cash" style="width: 5%"></div>
-                                        </div>
-                                        <div class="allocation-details">
-                                            <span class="allocation-type">Cash/Savings</span>
-                                            <span class="allocation-percentage">5%</span>
-                                            <span class="allocation-amount">£642</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="performance-insights">
-                            <h3>Performance Insights</h3>
-                            <div class="insight-grid">
-                                <div class="insight-card positive">
-                                    <i class="fas fa-arrow-up" aria-hidden="true"></i>
-                                    <div class="insight-content">
-                                        <h4>Strong Monthly Performance</h4>
-                                        <p>Your portfolio outperformed the FTSE Shariah index by 3.1% this month, driven by strong tech sector holdings.</p>
-                                    </div>
-                                </div>
-
-                                <div class="insight-card neutral">
-                                    <i class="fas fa-balance-scale" aria-hidden="true"></i>
-                                    <div class="insight-content">
-                                        <h4>Well-Balanced Allocation</h4>
-                                        <p>Your current asset mix aligns well with your moderate risk tolerance and investment timeline.</p>
-                                    </div>
-                                </div>
-
-                                <div class="insight-card suggestion">
-                                    <i class="fas fa-lightbulb" aria-hidden="true"></i>
-                                    <div class="insight-content">
-                                        <h4>Rebalancing Opportunity</h4>
-                                        <p>Consider increasing Sukuk allocation to 30% for better diversification as equity positions have grown.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Goals Progress -->
-                    <div class="report-section">
-                        <h2><i class="fas fa-target" aria-hidden="true"></i> Financial Goals Progress</h2>
-                        <div class="goals-overview">
-                            <div class="primary-goal">
-                                <div class="goal-header">
-                                    <h3>Primary Goal: House Deposit</h3>
-                                    <span class="goal-target">£45,000 target by July 2026</span>
-                                </div>
-                                <div class="goal-progress-section">
-                                    <div class="goal-visual">
-                                        <div class="goal-circle">
-                                            <div class="goal-percentage">68%</div>
-                                            <div class="goal-label">Complete</div>
-                                        </div>
-                                    </div>
-                                    <div class="goal-details">
-                                        <div class="goal-stat">
-                                            <span class="stat-value">£30,600</span>
-                                            <span class="stat-label">Current Progress</span>
-                                        </div>
-                                        <div class="goal-stat">
-                                            <span class="stat-value">£14,400</span>
-                                            <span class="stat-label">Remaining Needed</span>
-                                        </div>
-                                        <div class="goal-stat">
-                                            <span class="stat-value">£850/month</span>
-                                            <span class="stat-label">Required Savings</span>
-                                        </div>
-                                        <div class="goal-stat">
-                                            <span class="stat-value">18 months</span>
-                                            <span class="stat-label">Time Remaining</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="goal-projection">
-                                    <div class="projection-status on-track">
-                                        <i class="fas fa-check-circle" aria-hidden="true"></i>
-                                        <span>On Track</span>
-                                    </div>
-                                    <p>Based on your current savings rate of £950/month, you're ahead of schedule to reach your goal by May 2026.</p>
-                                </div>
-                            </div>
-
-                            <div class="secondary-goals">
-                                <h3>Other Financial Goals</h3>
-                                <div class="goal-list">
-                                    <div class="goal-item">
-                                        <div class="goal-icon">
-                                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="goal-info">
-                                            <h4>Children's Education Fund</h4>
-                                            <p>£50,000 by 2035</p>
-                                        </div>
-                                        <div class="goal-progress-mini">
-                                            <div class="progress-bar-mini">
-                                                <div class="progress-fill-mini" style="width: 23%"></div>
-                                            </div>
-                                            <span class="progress-text">23% (£11,500)</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="goal-item">
-                                        <div class="goal-icon">
-                                            <i class="fas fa-umbrella" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="goal-info">
-                                            <h4>Emergency Fund</h4>
-                                            <p>6 months expenses (£18,000)</p>
-                                        </div>
-                                        <div class="goal-progress-mini">
-                                            <div class="progress-bar-mini">
-                                                <div class="progress-fill-mini" style="width: 89%"></div>
-                                            </div>
-                                            <span class="progress-text">89% (£16,020)</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="goal-item">
-                                        <div class="goal-icon">
-                                            <i class="fas fa-sun" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="goal-info">
-                                            <h4>Retirement Planning</h4>
-                                            <p>£500,000 by age 65</p>
-                                        </div>
-                                        <div class="goal-progress-mini">
-                                            <div class="progress-bar-mini">
-                                                <div class="progress-fill-mini" style="width: 8%"></div>
-                                            </div>
-                                            <span class="progress-text">8% (£38,200)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Zakat & Charitable Giving -->
-                    <div class="report-section">
-                        <h2><i class="fas fa-hands-helping" aria-hidden="true"></i> Zakat & Charitable Giving</h2>
-                        <div class="zakat-analysis">
-                            <div class="zakat-summary">
-                                <div class="zakat-card primary">
-                                    <div class="zakat-amount">£321</div>
-                                    <div class="zakat-label">Annual Zakat Due</div>
-                                    <div class="zakat-detail">Based on current wealth of £12,847</div>
-                                </div>
-
-                                <div class="zakat-card">
-                                    <div class="zakat-amount">£27</div>
-                                    <div class="zakat-label">Monthly Provision</div>
-                                    <div class="zakat-detail">Recommended monthly saving</div>
-                                </div>
-
-                                <div class="zakat-card">
-                                    <div class="zakat-amount">£189</div>
-                                    <div class="zakat-label">Paid This Year</div>
-                                    <div class="zakat-detail">59% of annual obligation</div>
-                                </div>
-                            </div>
-
-                            <div class="zakat-breakdown">
-                                <h3>Zakat Calculation Breakdown</h3>
-                                <div class="calculation-table">
-                                    <div class="calc-row">
-                                        <span class="calc-item">Investment Portfolio</span>
-                                        <span class="calc-amount">£12,847</span>
-                                    </div>
-                                    <div class="calc-row">
-                                        <span class="calc-item">Cash & Savings</span>
-                                        <span class="calc-amount">£2,180</span>
-                                    </div>
-                                    <div class="calc-row">
-                                        <span class="calc-item">Gold Holdings</span>
-                                        <span class="calc-amount">£1,285</span>
-                                    </div>
-                                    <div class="calc-row total">
-                                        <span class="calc-item">Total Zakatable Wealth</span>
-                                        <span class="calc-amount">£16,312</span>
-                                    </div>
-                                    <div class="calc-row nisab">
-                                        <span class="calc-item">Nisab Threshold (2024)</span>
-                                        <span class="calc-amount">£3,427</span>
-                                    </div>
-                                    <div class="calc-row zakat-due">
-                                        <span class="calc-item">Zakat Due (2.5%)</span>
-                                        <span class="calc-amount">£408</span>
-                                    </div>
-                                </div>
-
-                                <div class="zakat-recommendations">
-                                    <h4>Charitable Giving Recommendations</h4>
-                                    <div class="recommendation-list">
-                                        <div class="charity-rec">
-                                            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-                                            <span>Set up monthly Zakat provision of £34 to spread payments</span>
-                                        </div>
-                                        <div class="charity-rec">
-                                            <i class="fas fa-heart" aria-hidden="true"></i>
-                                            <span>Consider additional Sadaqah of £50/month for extra spiritual reward</span>
-                                        </div>
-                                        <div class="charity-rec">
-                                            <i class="fas fa-mosque" aria-hidden="true"></i>
-                                            <span>Ramadan giving opportunity: £120 remaining can be distributed during Ramadan</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Learning & Coaching Progress -->
-                    <div class="report-section">
-                        <h2><i class="fas fa-graduation-cap" aria-hidden="true"></i> Learning & Coaching Journey</h2>
-                        <div class="learning-progress">
-                            <div class="learning-stats">
-                                <div class="learning-card">
-                                    <div class="learning-number">85%</div>
-                                    <div class="learning-label">Course Completion</div>
-                                    <div class="learning-detail">8 of 10 modules completed</div>
-                                </div>
-
-                                <div class="learning-card">
-                                    <div class="learning-number">12</div>
-                                    <div class="learning-label">Coaching Sessions</div>
-                                    <div class="learning-detail">With Coach Amina Hassan</div>
-                                </div>
-
-                                <div class="learning-card">
-                                    <div class="learning-number">47hrs</div>
-                                    <div class="learning-label">Learning Time</div>
-                                    <div class="learning-detail">Total time invested</div>
-                                </div>
-
-                                <div class="learning-card">
-                                    <div class="learning-number">4.9/5</div>
-                                    <div class="learning-label">Knowledge Score</div>
-                                    <div class="learning-detail">Latest assessment</div>
-                                </div>
-                            </div>
-
-                            <div class="coaching-summary">
-                                <h3>Recent Coaching Highlights</h3>
-                                <div class="coaching-timeline">
-                                    <div class="timeline-item">
-                                        <div class="timeline-date">Dec 15, 2024</div>
-                                        <div class="timeline-content">
-                                            <h4>Portfolio Rebalancing Session</h4>
-                                            <p>Reviewed asset allocation and adjusted Sukuk holdings for better diversification. Set up automatic rebalancing.</p>
-                                            <div class="timeline-actions">
-                                                <span class="action-item completed">✓ Increase Sukuk allocation to 25%</span>
-                                                <span class="action-item completed">✓ Set up monthly investment automation</span>
-                                                <span class="action-item pending">⏳ Research ESG screening options</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="timeline-item">
-                                        <div class="timeline-date">Nov 28, 2024</div>
-                                        <div class="timeline-content">
-                                            <h4>Goal Setting & Planning</h4>
-                                            <p>Established house deposit goal timeline and calculated required monthly savings. Created emergency fund strategy.</p>
-                                            <div class="timeline-actions">
-                                                <span class="action-item completed">✓ Set house deposit target of £45,000</span>
-                                                <span class="action-item completed">✓ Increase monthly savings to £950</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="next-session">
-                                    <div class="session-card">
-                                        <div class="session-icon">
-                                            <i class="fas fa-video" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="session-details">
-                                            <h4>Next Coaching Session</h4>
-                                            <p>January 15, 2025 at 2:00 PM</p>
-                                            <p><strong>Topic:</strong> Zakat optimization and tax planning</p>
-                                        </div>
-                                        <button class="btn btn-primary" onclick="joinCoachingCall()">
-                                            <i class="fas fa-video" aria-hidden="true"></i> Join Call
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Action Items & Recommendations -->
-                    <div class="report-section">
-                        <h2><i class="fas fa-tasks" aria-hidden="true"></i> Personalized Action Items</h2>
-                        <div class="personal-recommendations">
-                            <div class="action-priority high">
-                                <div class="action-header">
-                                    <span class="action-priority-label">THIS WEEK</span>
-                                    <h3>Complete Emergency Fund</h3>
-                                </div>
-                                <p>You're 89% of the way to your emergency fund goal. Add £1,980 to reach your 6-month expense target.</p>
-                                <div class="action-steps">
-                                    <div class="step">
-                                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                                        <span>Transfer £1,980 from current account to emergency savings</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="action-priority medium">
-                                <div class="action-header">
-                                    <span class="action-priority-label">THIS MONTH</span>
-                                    <h3>Optimize Zakat Planning</h3>
-                                </div>
-                                <p>Set up automated monthly Zakat provisions to spread your charitable giving throughout the year.</p>
-                                <div class="action-steps">
-                                    <div class="step">
-                                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                                        <span>Set up £34/month direct debit to charity account</span>
-                                    </div>
-                                    <div class="step">
-                                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                                        <span>Review and update beneficiary charities</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="action-priority low">
-                                <div class="action-header">
-                                    <span class="action-priority-label">NEXT QUARTER</span>
-                                    <h3>Explore Islamic Property Investment</h3>
-                                </div>
-                                <p>Research Shariah-compliant real estate investment options as your portfolio grows beyond £15,000.</p>
-                                <div class="action-steps">
-                                    <div class="step">
-                                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                                        <span>Research Islamic REIT options</span>
-                                    </div>
-                                    <div class="step">
-                                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                                        <span>Discuss property investment with coach</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Personal Report Footer -->
-                    <div class="personal-report-footer">
-                        <div class="footer-blessing">
-                            <i class="fas fa-quote-left" aria-hidden="true"></i>
-                            <p>"And whoever relies upon Allah - then He is sufficient for him. Indeed, Allah will accomplish His purpose."</p>
-                            <cite>Qur'an 65:3</cite>
-                        </div>
-                        <div class="footer-actions">
-                            <button class="btn btn-secondary" onclick="showScreen('dashboard')">
-                                <i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Dashboard
-                            </button>
-                            <button class="btn btn-primary" onclick="scheduleCoaching()">
-                                <i class="fas fa-calendar-plus" aria-hidden="true"></i> Schedule Next Session
-                            </button>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -5209,12 +3668,219 @@
             }, 3000);
         }
 
-        // Keyboard navigation support
-        function handleKeySelection(event, element, value) {
-            if (event.key === 'Enter' || event.key === ' ') {
-                event.preventDefault();
-                selectOption(element, value);
+        // Global state for advanced features
+        let selectedStock = null;
+        let virtualBalance = 50000;
+        let portfolio = [];
+        let isSessionActive = false;
+
+        // Investment Simulator Functions
+        function showInvestmentSimulator() {
+            showScreen('investment-simulator');
+        }
+
+        function showHalalScreener() {
+            showScreen('halal-screener');
+        }
+
+        function selectStock(symbol, name, price, change) {
+            selectedStock = { symbol, name, price, change };
+            
+            // Remove previous selections
+            document.querySelectorAll('.stock-item').forEach(item => {
+                item.classList.remove('selected');
+            });
+            
+            // Add selection to clicked item
+            event.currentTarget.classList.add('selected');
+            
+            // Show trading form
+            document.getElementById('tradingForm').style.display = 'block';
+            document.getElementById('noSelection').style.display = 'none';
+            
+            // Update selected stock display
+            document.getElementById('selectedStock').innerHTML = `
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <strong>${symbol}</strong>
+                        <div style="color: var(--light-gray); font-size: 0.9rem;">${name}</div>
+                    </div>
+                    <div style="text-align: right;">
+                        <div style="font-weight: bold;">${price}</div>
+                        <div class="change ${change >= 0 ? 'positive' : 'negative'}">${change >= 0 ? '+' : ''}${change}%</div>
+                    </div>
+                </div>
+            `;
+            
+            updateTotalCost();
+        }
+
+        function updateTotalCost() {
+            if (!selectedStock) return;
+            
+            const quantity = parseInt(document.getElementById('quantity').value) || 0;
+            const total = (selectedStock.price * quantity).toFixed(2);
+            document.getElementById('totalCost').textContent = `${total}`;
+        }
+
+        function executeTrade() {
+            if (!selectedStock) return;
+            
+            const orderType = document.getElementById('orderType').value;
+            const quantity = parseInt(document.getElementById('quantity').value) || 0;
+            const totalCost = selectedStock.price * quantity;
+            
+            if (quantity <= 0) {
+                showNotification('Please enter a valid quantity', 'error');
+                return;
             }
+            
+            if (orderType === 'buy' && totalCost > virtualBalance) {
+                showNotification('Insufficient funds for this trade', 'error');
+                return;
+            }
+            
+            // Execute the trade
+            if (orderType === 'buy') {
+                virtualBalance -= totalCost;
+                addToPortfolio(selectedStock, quantity);
+                showNotification(`Successfully bought ${quantity} shares of ${selectedStock.symbol}`, 'success');
+            } else {
+                // Sell logic (simplified)
+                virtualBalance += totalCost;
+                showNotification(`Successfully sold ${quantity} shares of ${selectedStock.symbol}`, 'success');
+            }
+            
+            // Update balance display
+            document.getElementById('virtualBalance').textContent = virtualBalance.toFixed(0);
+            updatePortfolioDisplay();
+            
+            // Reset form
+            document.getElementById('quantity').value = 1;
+            updateTotalCost();
+        }
+
+        function addToPortfolio(stock, quantity) {
+            const existingPosition = portfolio.find(p => p.symbol === stock.symbol);
+            if (existingPosition) {
+                existingPosition.quantity += quantity;
+                existingPosition.totalValue = existingPosition.quantity * stock.price;
+            } else {
+                portfolio.push({
+                    symbol: stock.symbol,
+                    name: stock.name,
+                    quantity: quantity,
+                    price: stock.price,
+                    totalValue: quantity * stock.price
+                });
+            }
+        }
+
+        function updatePortfolioDisplay() {
+            const portfolioList = document.getElementById('portfolioList');
+            
+            if (portfolio.length === 0) {
+                portfolioList.innerHTML = `
+                    <div class="empty-portfolio">
+                        <i class="fas fa-chart-pie"></i>
+                        <p>Your portfolio is empty. Start by buying some halal investments!</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            portfolioList.innerHTML = portfolio.map(position => `
+                <div class="stock-item">
+                    <div class="stock-info">
+                        <strong>${position.symbol}</strong>
+                        <span>${position.name}</span>
+                        <small>${position.quantity} shares</small>
+                    </div>
+                    <div class="stock-price">
+                        <span class="price">${position.totalValue.toFixed(2)}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Halal Screener Functions
+        function applyFilters() {
+            showNotification('Filters applied successfully', 'success');
+            // In a real app, this would filter the results
+            const randomCount = Math.floor(Math.random() * 1000) + 2000;
+            document.getElementById('resultsCount').textContent = `${randomCount.toLocaleString()} stocks found`;
+        }
+
+        // Live Coaching Session Functions
+        function startLiveSession(clientName) {
+            document.getElementById('sessionClientName').textContent = clientName;
+            document.getElementById('clientVideoName').textContent = clientName;
+            isSessionActive = true;
+            showScreen('live-session');
+            showNotification(`Starting live session with ${clientName}`, 'success');
+        }
+
+        function toggleMute() {
+            const btn = document.getElementById('muteBtn');
+            const icon = btn.querySelector('i');
+            
+            if (icon.classList.contains('fa-microphone')) {
+                icon.className = 'fas fa-microphone-slash';
+                btn.style.background = '#EF4444';
+                showNotification('Microphone muted', 'info');
+            } else {
+                icon.className = 'fas fa-microphone';
+                btn.style.background = 'var(--primary-blue)';
+                showNotification('Microphone unmuted', 'info');
+            }
+        }
+
+        function toggleVideo() {
+            const btn = document.getElementById('videoBtn');
+            const icon = btn.querySelector('i');
+            
+            if (icon.classList.contains('fa-video')) {
+                icon.className = 'fas fa-video-slash';
+                btn.style.background = '#EF4444';
+                showNotification('Camera turned off', 'info');
+            } else {
+                icon.className = 'fas fa-video';
+                btn.style.background = 'var(--primary-blue)';
+                showNotification('Camera turned on', 'info');
+            }
+        }
+
+        function toggleScreenShare() {
+            const btn = document.getElementById('shareBtn');
+            const text = btn.textContent.trim();
+            
+            if (text.includes('Share')) {
+                btn.innerHTML = '<i class="fas fa-desktop"></i> Stop Sharing';
+                btn.style.background = '#EF4444';
+                showNotification('Screen sharing started', 'success');
+            } else {
+                btn.innerHTML = '<i class="fas fa-desktop"></i> Share Screen';
+                btn.style.background = 'var(--accent-gold)';
+                showNotification('Screen sharing stopped', 'info');
+            }
+        }
+
+        function endSession() {
+            if (confirm('Are you sure you want to end this coaching session?')) {
+                isSessionActive = false;
+                showScreen('coach-dashboard');
+                showNotification('Coaching session ended', 'success');
+            }
+        }
+
+        function showTool(toolName) {
+            // Remove active class from all tabs and panels
+            document.querySelectorAll('.tool-tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tool-panel').forEach(panel => panel.classList.remove('active'));
+            
+            // Add active class to selected tab and panel
+            document.getElementById(`${toolName}Tab`).classList.add('active');
+            document.getElementById(`${toolName}Panel`).classList.add('active');
         }
 
         function selectOption(element, value) {
@@ -5424,6 +4090,15 @@
             validateField(this, name.length >= 2, 'Name must be at least 2 characters');
         });
         document.getElementById('monthlyAmount').addEventListener('change', validateStep3);
+        
+        // Investment simulator event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            // Quantity input listener for cost calculation
+            const quantityInput = document.getElementById('quantity');
+            if (quantityInput) {
+                quantityInput.addEventListener('input', updateTotalCost);
+            }
+        });
 
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
@@ -5476,66 +4151,6 @@
                 document.body.classList.remove('keyboard-navigation');
             });
         });
-
-        // Report functionality
-        function exportReport(format) {
-            showNotification(`Exporting report as ${format.toUpperCase()}...`, 'info');
-            
-            // Simulate export process
-            setTimeout(() => {
-                showNotification(`Report exported successfully as ${format.toUpperCase()}!`, 'success');
-            }, 2000);
-        }
-
-        function shareReport() {
-            showNotification('Generating shareable link...', 'info');
-            
-            setTimeout(() => {
-                // Simulate copying link to clipboard
-                showNotification('Shareable link copied to clipboard!', 'success');
-            }, 1500);
-        }
-
-        function scheduleReview() {
-            showNotification('Opening calendar to schedule review meeting...', 'info');
-            
-            setTimeout(() => {
-                showNotification('Review meeting scheduled for next week!', 'success');
-            }, 1500);
-        }
-
-        // Personal report functionality
-        function exportPersonalReport(format) {
-            showNotification(`Preparing your personal financial report as ${format.toUpperCase()}...`, 'info');
-            
-            setTimeout(() => {
-                showNotification(`Personal report downloaded successfully!`, 'success');
-            }, 2000);
-        }
-
-        function shareWithCoach() {
-            showNotification('Sharing report with your coach Amina Hassan...', 'info');
-            
-            setTimeout(() => {
-                showNotification('Report shared! Your coach will review before your next session.', 'success');
-            }, 1500);
-        }
-
-        function scheduleCoaching() {
-            showNotification('Opening coaching calendar...', 'info');
-            
-            setTimeout(() => {
-                showNotification('Coaching session scheduled for next Tuesday at 2:00 PM!', 'success');
-            }, 1500);
-        }
-
-        function joinCoachingCall() {
-            showNotification('Launching video call with Coach Amina...', 'info');
-            
-            setTimeout(() => {
-                showNotification('Video call initiated! Coach will join shortly.', 'success');
-            }, 1000);
-        }
     </script>
 </body>
 </html>
